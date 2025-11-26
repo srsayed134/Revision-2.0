@@ -2,6 +2,7 @@
 // console.log(2 + 2) ;
 // console.log({name: "Alex"})
 
+
 // Variables---------
 //Declared variable;
 // let name;
@@ -176,40 +177,124 @@
 // 02:- Control flow
 
 //Conditional statement
-let password = 8;
-if(password === 8){
-    console.log("Welcome");
-}else if(password <= 8){
-    console.log("Password is too short");
-}else if(password >= 8){
-    console.log("Too long password & Password should be 8 characters");
-}else {
-    console.log("Please provide a password")
-}
-//Switch statements
+// let password = 8;
+// if(password === 8){
+//     console.log("Welcome");
+// }else if(password <= 8){
+//     console.log("Password is too short");
+// }else if(password >= 8){
+//     console.log("Too long password & Password should be 8 characters");
+// }else {
+//     console.log("Please provide a password")
+// }
+// //Switch statements
 
-let x = 0;
-let bulb;
+// //Example:- 1
 
-switch (x) {
-    case 0:
-        bulb = "OFF"
-        console.log(bulb)
-        break;
-    case 1:
-        bulb = "ON";
-        console.log(bulb)
-        break;
-    default:
-        bulb = "no value found"
-        console.log(bulb)
-        break;
-}
+// let x = 0;
+// let bulb;
 
+// switch (x) {
+//     case 0:
+//         bulb = "OFF"
+//         console.log(bulb)
+//         break;
+//     case 1:
+//         bulb = "ON";
+//         console.log(bulb)
+//         break;
+//     default:
+//         bulb = "no value found"
+//         console.log(bulb)
+//         break;
+// }
 
+// // Example:- 2
 
+// let day = "Wednesday";
+// let WeekDays ;
 
+// switch (day) {
+//     case "Saturday":
+//         WeekDays = "Work day"
+//         break;
+//     case "Sunday":
+//         WeekDays = "Off day"
+//         break;
+//     case "Monday":
+//         WeekDays = "Work day"
+//         break;
+//     case "Tuesday":
+//         WeekDays = "Work day"
+//         break;
+//     case "Wednesday":
+//         WeekDays = "Work day"
+//         break;
+//     case "Thursday":
+//         WeekDays = "Work day"
+//         break;
+//     case "Friday":
+//         WeekDays = "Work day"
+//         break;
 
+//     default:
+//         WeekDays = "No dayes name found"
+//         break;
+// }
+// console.log(`Today is ${WeekDays}`);
+
+//Challenge 
+
+// let fruite = "banana";
+
+// switch (fruite) {
+//     case "banana":
+//         console.log("Banana is good")
+//         break;
+//     case "Orange":
+//         console.log("I am not a fan of orange")
+//         break;
+//     case "Apple":
+//         console.log("How you like them apples?")
+//         break;
+
+//     default:
+//         console.log("I have naver heard of that fruit")
+//         break;
+// }
+
+//For loops---------------
+
+// for (let i = 0; i <= 20; i++) {
+//     for (let j = 0; j < 2; j++) {
+//         console.log(`This is ${i} for `)
+//     }
+// }
+
+// // Challenge++++++++++++++++
+
+// for (let i = 0; i <= 1000 ; i++) {
+//     console.log(`${i} Sayed`)
+    
+// }
+
+//While loops --------------
+
+// let i = 1;
+
+// while (i <= 5) {
+//     console.log(`Hello world ${i}`);
+//     i++;
+// }
+
+//Challenge ++++++++++++++
+
+// let i = 10;
+
+// while (i <= 100) {
+//     console.log(`Hello world ${i}`);
+//     i++;
+// }
 
 
 
