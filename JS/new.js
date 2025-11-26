@@ -296,7 +296,61 @@
 //     i++;
 // }
 
+//Do while loops---------------
 
+// let i = 1;
+// do {
+//     console.log(`This is ${i}`);
+//     i++;
+// } while (i <= 10);
+
+// Challenge ++++++++++++++++
+
+// let i = 20;
+// do {
+//     console.log(`This is ${i}`);
+//         i++;
+
+// } while (i <= 400);
+
+//Logical operators +++++++++++
+
+//AND(&&), OR(||), NOT(!);
+
+// let a = 25;
+// let b = 50;
+// let c = 75;
+// //Or
+
+// if (a > b || b < c) {
+//     console.log("25 is small and 75 is big")
+// }
+// //And
+
+// if (a < b && c > b) {
+//     console.log("50 is bigger and 25 is smaller")
+// } 
+
+// //Not 
+
+// if (!(a > b)){
+//     console.log("This is not")
+// }
+
+// 03:- Data type 
+
+//Array  
+
+//Challenge+++++++++++++
+
+// let favSingers = ["KK", "Adnan sami", "Kishor"];
+// console.log(favSingers[0]);
+
+// let favNumbers = [1, 2, 3, 4];
+
+// let mixedArr = ["string", ["otherarray", "anotherArray"], 123, true];
+// console.log(mixedArr[2]);
+// console.log(mixedArr[1][0]);
 
 
 
