@@ -175,6 +175,7 @@
 
 // 02:- Control flow
 
+//Conditional statement
 let password = 8;
 if(password === 8){
     console.log("Welcome");
@@ -184,6 +185,25 @@ if(password === 8){
     console.log("Too long password & Password should be 8 characters");
 }else {
     console.log("Please provide a password")
+}
+//Switch statements
+
+let x = 0;
+let bulb;
+
+switch (x) {
+    case 0:
+        bulb = "OFF"
+        console.log(bulb)
+        break;
+    case 1:
+        bulb = "ON";
+        console.log(bulb)
+        break;
+    default:
+        bulb = "no value found"
+        console.log(bulb)
+        break;
 }
 
 
