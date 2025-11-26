@@ -126,6 +126,70 @@
 
 // 4. Type Conversion
 
+//Convert string to number
+
+// let money = "50";
+// money = parseInt(money);
+// console.log(money)
+// console.log(typeof money); //Number
+
+// let taka = "20";
+// taka = +taka;
+// console.log(taka);
+// console.log(typeof taka); //Number
+
+// let dollar = "80";
+// dollar = Number(dollar);
+// console.log(dollar);
+// console.log(typeof dollar); //Number
+
+// //Conver number to string
+
+// let numb = 50;
+// numb = numb.toString();
+// console.log(numb);
+// console.log(typeof numb); //String
+
+// let roll = 27;
+// roll = String(roll);
+// console.log(roll);
+// console.log(typeof roll); //String
+
+// //Convet String to decimal
+
+// let calc = "25.247";
+// calc = parseFloat(calc);
+// console.log(calc);
+// console.log(typeof calc); //Number
+
+// let abc = "25.247abc";
+// abc = parseFloat(abc);
+// console.log(abc); //25.247
+// console.log(typeof abc); //Number;
+
+// let ABC = "125 785";
+// ABC = parseFloat(ABC);
+// console.log(ABC); //125
+// console.log(typeof ABC); //Number;
+
+
+// 02:- Control flow
+
+let password = 8;
+if(password === 8){
+    console.log("Welcome");
+}else if(password <= 8){
+    console.log("Password is too short");
+}else if(password >= 8){
+    console.log("Too long password & Password should be 8 characters");
+}else {
+    console.log("Please provide a password")
+}
+
+
+
+
+
 
 
 
