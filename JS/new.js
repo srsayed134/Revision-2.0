@@ -352,8 +352,40 @@
 // console.log(mixedArr[2]);
 // console.log(mixedArr[1][0]);
 
+//Array method --------------
 
+// let cars = ["Toyota","Audy", "BYD", "Tesla"];
+// console.log(cars.length);
+// cars.push("BMW");
+// console.log(cars);
+// cars.pop();
+// console.log(cars);
+// cars.shift();
+// console.log(cars);
+// cars.unshift("Charry Tiggo");
+// console.log(cars);
+// cars.sort();
+// console.log(cars);
 
+// let car2 = ["VW", "Honda"]
+// console.log(cars.concat(car2))
+// console.log(car2.includes("Honda")) //True
+// console.log(cars.join("-"));
+// console.log(cars.reverse());
+// console.log(cars.slice(0, 1))
+// console.log(cars.splice(1, 1))
+
+//Objects-----------
+
+const person = {
+    FierstName: "Mehmed",
+    LastName: "Joffery",
+    age: 4,
+    location: ["Planet", "Earth"],
+    isProgrammer: true,
+}
+console.log(person)
+//Access items from object
 
 
 
