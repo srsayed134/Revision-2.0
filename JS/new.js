@@ -377,19 +377,103 @@
 
 //Objects-----------
 
-const person = {
-    FierstName: "Mehmed",
-    LastName: "Joffery",
-    age: 4,
-    location: ["Planet", "Earth"],
-    isProgrammer: true,
-}
-console.log(person)
-//Access items from object
+// const person = {
+//     FierstName: "Mehmed",
+//     LastName: "Joffery",
+//     age: 4,
+//     location: ["Planet", "Earth"],
+//     isProgrammer: true,
+//     10: "ten"
+// }
+// console.log(person)
+// //Access items from object
+// console.log(person.FierstName);
+// console.log(person["age"]);
+// console.log(person["location"]);
+// console.log(person["10"]);
 
+// person.language = "Bangla";
+// person.location = "Hungary"; //Its change existing key with value
+// console.log(person);
+// delete person.isProgrammer;
+// console.log(person)
 
+//Challenge+++++++++++
 
+// const car = {
+//     type: "Sedan",
+//     model: 1980,
+//     color: "Red"
+// }
+// console.log(car);
+// console.log(typeof car);
+// car.type = "Toyota";
+// console.log(car);
+// car.wheels = 4;
+// console.log(car);
 
+//Function 
+//Function declaration
+
+// function sayHello(name) {
+//     console.log(`HEllo ${name}`);
+// }
+
+// sayHello("Nirob");
+// sayHello("Pinki");
+
+// function add(a, b){
+//     return a + b;
+// }
+
+// let c = add(2, 5);
+// console.log(c)
+
+//Challenge ++++++++++
+
+// function myFunction(a, b){
+//     let c = a * b;
+//     return c
+// }
+
+// console.log(myFunction(8, 9));
+
+//Function expression
+
+// const greetings = function(user){
+//     console.log(`Hello ${user}`);
+// }
+
+// greetings("Jhon")
+
+//Callbeck function
+
+// function greet(name, cb){
+//      console.log(`Hi, i am ${name}`);
+//      cb();
+// }
+
+// function callbecks(){
+//     console.log(`I am callbank function`)
+// }
+// greet("Mehmed", callbecks);
+
+// //OR 
+
+// greet("Mehmed2", function callbecks(){
+//     console.log(`I am callbank function`)
+// })
+
+//Challenge+++++++++++
+
+// function showCallFunc(fn){
+//    const numb = 10;
+//    fn(numb);
+// }
+
+// showCallFunc(function callBeck(number){
+//     console.log(number)
+// }) //Here fn(numb) is reference of callBeck(number)
 
 
 
