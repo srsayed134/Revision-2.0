@@ -475,6 +475,61 @@
 //     console.log(number)
 // }) //Here fn(numb) is reference of callBeck(number)
 
+//Method (1) -------------
 
+// function greet() {
+//     return `Hello, my name is ${personalbar.name} & i am ${person.age} years old`;
+// }
 
+// const person = {
+//     name: "Yan",
+//     age: 30,
+//     greet,
+// }
 
+// console.log(person.greet())
+
+//Method (2) ------------
+
+// const person = {
+//     name: "Nimo",
+//     age: 20,
+//     greet: function(){
+//         return `Hello, my name is ${person.name} and i am ${person.age} years old`;
+//     },
+// }
+
+// console.log(person.greet());
+
+//JSON ++++++++++++
+
+// const person = {
+//     name: "Jhon dow",
+//     age : 20,
+//     email : "js@gmail.com",
+//     hobbies: ["Reading", "Running", "Cooking"],
+//     address : {
+//         city : "New York",
+//         idk: true
+//     }
+// }
+
+// JSON STRINGIFY()
+// const JSON_person = JSON.stringify(person);
+// console.log(JSON.stringify(person))
+
+// console.log(JSON_person);
+
+//JSON PARSE
+// const JSON_parse = JSON.parse(JSON_person);
+// console.log(JSON_parse)
+
+//Date, time ++++++++++++++++++
+
+const currentDate = new Date();
+console.log(currentDate);
+
+const customDate = new Date(2001, 10, 22);
+console.log(customDate)
+
+console.log(currentDate.getFullYear())

@@ -60,28 +60,28 @@
 
 // Indicates that the algorithms execution time grows quadratically with the size of the input data (represented by n)
 
-const findPairs = (arr) => {
-    for(let i = 0; i < arr.length; i++){
-        for(let j = 0; j < arr.length; j++){
-                console.log(`Pair: ${i} ${j}`)
-        }
-    }
+// const findPairs = (arr) => {
+//     for(let i = 0; i < arr.length; i++){
+//         for(let j = 0; j < arr.length; j++){
+//                 console.log(`Pair: ${i} ${j}`)
+//         }
+//     }
 
 // O(n)
 
-    for(let q = 0; q < arr.length; q++){
-        console.log("---------", q)
-    }
+    // for(let q = 0; q < arr.length; q++){
+    //     console.log("---------", q)
+    // }
 
     //So if we combine all the "O" operations it becomes O(n^2 + n)
     //O(n^2) is a dominant term
     //"n" is a non-dominant term
     //So we remove the "non-dominant" term and we are only left with O(n^2)
     //This way, we simplify our bigO
-}
+// }
 
-let number = [1,2,3,4,5,6]
-findPairs(number);
+// let number = [1,2,3,4,5,6]
+// findPairs(number);
 
 
 
