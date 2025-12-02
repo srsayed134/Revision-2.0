@@ -526,10 +526,63 @@
 
 //Date, time ++++++++++++++++++
 
-const currentDate = new Date();
-console.log(currentDate);
+// const currentDate = new Date();
+// console.log(currentDate);
 
-const customDate = new Date(2001, 10, 22);
-console.log(customDate)
+// const customDate = new Date(2001, 10, 22);
+// console.log(customDate)
 
-console.log(currentDate.getFullYear())
+// console.log(currentDate.getFullYear());
+// console.log(currentDate.toLocaleString());
+// console.log(currentDate.toDateString());
+// console.log(currentDate.toISOString());
+
+// currentDate.setDate(currentDate.getDate() + 1);
+// console.log(currentDate)
+
+//SetInterval++++++++++++++++
+
+// setInterval(() => console.log(`This is implement in two second`),2000)
+
+//Settime out+++++++++++++++
+
+// setTimeout(function() {
+//     console.log(`This function will be executed after 3 seconds`)
+// }, 3000) ;
+
+// const itervalid =  setInterval(function () {
+//     console.log(`This is being executed at the iterval`);
+// }, 1000);
+
+// setTimeout(function(){
+//     clearInterval(itervalid);
+//     console.log(`Interval stoped`)
+// }, 10000)
+
+//Template strings, 
+// let test = "Big name";
+// function test2() {
+//     return `My name is saad`
+// }
+
+// console.log(`This is 
+//     templete string`);
+// console.log(`This is ${test}`);
+// console.log(`This is ${5+5}`);
+
+// console.log(`${test2()}`)
+
+//Challenge --------------;
+
+// let text = `
+// The quick 
+// brown fox
+// jumps over
+// the lazy dog`
+// console.log(text);
+
+// let firstName = `Diago`;
+// let lastName = `Meradona`;
+
+// let fullName = `${firstName} ${lastName}`;
+// console.log(fullName)
