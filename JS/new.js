@@ -586,3 +586,142 @@
 
 // let fullName = `${firstName} ${lastName}`;
 // console.log(fullName)
+
+//Arrow function++++++++++++++++++++
+
+// greet = userName => {
+//     return `Hello ${userName}`;
+// }
+// console.log(greet("Huxn"))
+
+// greet = userName => `Hello ${userName}`;
+// console.log(greet("Nik"))
+
+// let greet = userName => `Hello this is ${userName}`;
+// console.log(greet("Niom"))
+
+//Enchanced object literals
+
+// const user = (name, age, work) => {
+//     return{
+//         name: name,
+//         age: age,
+//         work: work,
+//     };
+// }
+
+// const huxn = user("Niom", 25, "Business");
+// console.log(huxn)
+
+//In onject literals you can ommit key 
+
+// const user1 = (name, age, work) => {
+//     return{
+//          name,
+//          age,
+//          work,
+//          description:() => {
+//             console.log(`My name is ${name} and i am ${age} years old and working on ${work}`)
+//          }
+//          }
+//     };
+
+
+// const huxn1 = user1("Niom", 25, "Business");
+// huxn1.description();
+
+//Challenge ----------
+
+// let a = 1;
+// let b = 2;
+// let c = 3;
+
+// let obj = {
+//     a,
+//     b,
+//     c
+// }
+// console.log(obj)
+
+//Challenge ------------
+
+// const lib = {
+//     sum: (a, b) => a + b,
+//     mult: (a, b) => a * b,
+// };
+// console.log(lib.sum(2, 3));
+// console.log(lib.mult(2, 3));
+
+//Challenge -------------
+
+// let person = (name, age, height) => {
+//     return{
+//          name, age, height
+//     }
+// }
+// let sala = person("Sala", 35, 5.5);
+
+// console.log(sala)
+
+//DEfault function parameters ++++++++++
+
+// function countTo5(count = true) {
+//     if (count === true) {
+//         for(let i = 1; i <= 5; i++){
+//             console.log(`Count: ${i}`)
+//         }; 
+//     }
+// }
+
+// countTo5();
+// function ratings(rate = 3){
+//     if (rate === 5) {
+//         console.log(`High Ratings :)`)
+//     }else if(rate === 0){
+//         console.log(`Low Ratings :(`)
+//     }else if(rate === 3){
+//         console.log(`No Ratings`)
+//     }
+// }
+// ratings()
+
+// challenge -------------
+
+// function multiply(a, b = 1) {
+//     console.log(a * b);
+// }
+
+// multiply(5)
+
+
+//Spread operator+++++++++++++
+
+//Function  
+function giveMe4 (a,b,c,d){
+    console.log(a, b, c, d);
+}
+
+let colors = ["Red", "Blue", "Green", "Pink"]
+giveMe4(colors);
+giveMe4(...colors);
+
+//Array 
+
+const strNums = ["One", "Two", "Three"];
+const moreStrNums = ["Four", "Five", "Six"];
+
+const concat = [...strNums, ...moreStrNums];
+console.log(concat);
+
+const allpep = ["Saad", strNums, "Nik"]
+console.log(allpep)
+const allPep1 = ["Saad", ...strNums, "Nik"]
+console.log(allPep1)
+
+//Objects
+
+const obj1 = {x: 1, y: 2}
+const obj2 = {z: 3}
+let newOBJ = {...obj1, ...obj2};
+console.log(newOBJ)
+  
