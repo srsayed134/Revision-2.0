@@ -46,23 +46,86 @@
 
 //+++++++++++++++Function parameters annotations+++++++++
 
-function addOne(num: number){
-    return num + 2;
-}
+// function addOne(num: number){
+//     return num + 2;
+// }
 
-const res = addOne(3);
-console.log(res)
+// const res = addOne(3);
+// console.log(res)
 
 //Arrow function 
 
-const multiplyNum = (num: number, num2: number) => num * num2;
-console.log(multiplyNum(3, 5))
+// const multiplyNum = (num: number, num2: number) => num * num2;
+// console.log(multiplyNum(3, 5)) //parameter should equal with arguments
 
 
+//++++++++++++++++Default params value+++++++++++++++
 
+// function greet(person: string = "Anonoymous"){
+//     return `Hello ${person};`
+// }
 
+// const res = greet();
+// console.log(res)
 
+//++++++++++++Return annotation++++++++++++
+// function double(x: number,y: number) : number{
+//      return x * y;
+// }
+// const res = double(5, 9);
+// console.log(res)
 
+//++++++++++++++++Void function++++++++++++++++++
+// function printMessage(message: string): void{
+//     console.log(`This is my ${message}`); //it in void and when we return it will error
+// }
+
+// printMessage("message");
+
+//++++++++++++++++Never +++++++++++++++++++++
+
+// function throwError(msg: string):never {
+//     throw new Error(msg);
+// }
+
+// function infiniteLoop(): never{
+//     while (true) {}
+// }
+
+// let x: never;
+
+// function neverReturn(): never {
+//     while(true) {}
+// }
+
+// x = neverReturn()
+
+//++++++++++++++++Arrays Types+++++++++++++++++
+
+//Ex:- 1
+// const numbers: number[] = [1, 2, 3, 4];
+// console.log(numbers)
+ 
+//Ex:- 2
+// const names: Array<string> = ["Alice", "Bob", "Charlie"];
+// console.log(names)
+
+//EX:- 3
+
+// const items: string[] = [];
+// items.push("Furniture");
+//items.push(25); //you cant push number type it will throw error
+
+// console.log(items)
+
+//++++++++++++++++Multi Dimensional+++++++++++++++
+
+// const sing: number[] = [1, 2, 3, 4, 5]
+// const matrix: number[][] = [[1, 2,3, 4]]
+// const multiDi: number[][][] = [[[4, 5]]];
+// console.log(multiDi)
+
+//++++++++++++++++Objects ++++++++++++++
 
 
 

@@ -902,6 +902,111 @@
 // ]
 
 // const [,,,{singer}] = songs;
-// const [,,,{duration}] = songs;
+// const [,,,{duration: d}] = songs;
 // console.log(singer);
-// console.log(duration);
+// console.log(d);
+
+//The ternary operator+++++++++++++++++
+
+// //Ex:- 1
+// let password = 8;
+
+// function passwordChecker(ps) {
+//     return ps === 8 ? "Pass is matched" : "Pass is not match"
+// }
+
+// let passTsker = passwordChecker(password);
+// console.log(passTsker);
+
+// //Ex:- 2
+// let age = 25;
+// const isadult = age >= 18 ? "Adutlt" : "Not a Adult";
+// console.log(isadult)
+
+// //Challenge------------
+
+// let money = 5;
+
+// let buyingCap = money >= 1 ? "buy products" : "they should bring money";
+
+// console.log(buyingCap)
+
+//For in loop +++++++++++++++++++++
+
+//Object
+// let person ={
+//     name: "Alex",
+//     age: 20,
+//     country: "USA",
+// }
+
+// for(let keys in person){
+//     console.log(keys , person[keys])
+// }
+
+//Array
+// let fruits = ["Apple","Mango", "Pineapple"];
+
+// for(let index in fruits){
+//     console.log(`${index}: ${fruits[index]}`)
+// }
+
+//Challenge----------------
+
+// const object = {
+//     a: 1,
+//     b: 2,
+//     c: 3,
+// }
+// for(let keys in object){
+//     console.log(keys, object[keys])
+// }
+
+
+//for of loop ++++++++++++++++++
+
+// let stuNames = ["JEE", "NIOM", "ALEX"];
+// for (const stuName of stuNames) {
+//     console.log(stuName)
+// }
+
+// const text = "Happy";
+// for (const word of text) {
+//     console.log(word)
+// }
+
+//Challenge -----------
+
+// const array1 = ["a", "b", "c"];
+
+// for (const array of array1) {
+//     console.log(array)
+// }
+
+//Foreach++++++++++++++++++
+
+// const colors = ["Blue", "Teal", "Black", "Yellow"];
+
+// colors.forEach((color) => console.log(color))
+
+// const words = ["hello", "bird", "football"]
+
+// const capWords = words.forEach((word, index, arr) => {
+//     arr[index] = word[0].toUpperCase() + word.substring(1)
+// })
+
+// console.log(words)
+
+//Challenge-------------
+
+// let numbers = [5, 3, 8, 88, 98];
+// numbers.forEach(numbwe => {
+//     console.log(numbwe)
+// });
+// let sum = 0;
+
+// function adder(number){
+//     sum = sum + number
+// }
+// numbers.forEach(adder);
+// console.log(sum)
