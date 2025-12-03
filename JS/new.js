@@ -696,32 +696,212 @@
 
 //Spread operator+++++++++++++
 
-//Function  
-function giveMe4 (a,b,c,d){
-    console.log(a, b, c, d);
-}
+// //Function  
+// function giveMe4 (a,b,c,d){
+//     console.log(a, b, c, d);
+// }
 
-let colors = ["Red", "Blue", "Green", "Pink"]
-giveMe4(colors);
-giveMe4(...colors);
+// let colors = ["Red", "Blue", "Green", "Pink"]
+// giveMe4(colors);
+// giveMe4(...colors);
 
-//Array 
+// //Array 
 
-const strNums = ["One", "Two", "Three"];
-const moreStrNums = ["Four", "Five", "Six"];
+// const strNums = ["One", "Two", "Three"];
+// const moreStrNums = ["Four", "Five", "Six"];
 
-const concat = [...strNums, ...moreStrNums];
-console.log(concat);
+// const concat = [...strNums, ...moreStrNums];
+// console.log(concat);
 
-const allpep = ["Saad", strNums, "Nik"]
-console.log(allpep)
-const allPep1 = ["Saad", ...strNums, "Nik"]
-console.log(allPep1)
+// const allpep = ["Saad", strNums, "Nik"]
+// console.log(allpep)
+// const allPep1 = ["Saad", ...strNums, "Nik"]
+// console.log(allPep1)
 
-//Objects
+// //Objects
 
-const obj1 = {x: 1, y: 2}
-const obj2 = {z: 3}
-let newOBJ = {...obj1, ...obj2};
-console.log(newOBJ)
-  
+// const obj1 = {x: 1, y: 2}
+// const obj2 = {z: 3}
+// let newOBJ = {obj1, obj2};
+// console.log(newOBJ)
+// let newOBJ1 = {...obj1, ...obj2};
+// console.log(newOBJ1)
+
+//Challenge ----------------
+
+// let arr = [1,2,3];
+// let arr2 = [4,5,6];
+// let arr3 = [...arr, ...arr2];
+// console.log(arr3);
+
+// const user = {
+//     name: "Jen",
+//     age: 22,
+// }
+
+// let user1 = {...user};
+// console.log(user)
+// console.log(user1)
+
+// Rest parameter+++++++++++++++++
+
+// function user(x,...userData){
+//     console.log(x)
+//     console.log(userData);
+// }
+
+// user("Huxn", 19, "programmer", "football");
+
+//Destructing ++++++++++
+
+//Array destructurring ++++++
+//EX 1
+
+// const foo = ["One", "Two"];
+
+// const [huxn, yellow, green, blue] = foo;
+// console.log(huxn)
+// console.log(yellow)
+// console.log(green)
+
+//EX 2
+
+// let a, b;
+
+// [a = 5, b = 8, c = 9] = ["One", "two"]
+// console.log(b) //two
+// console.log(c) //9
+
+//EX 3
+
+// function f(){
+//     return [1,2];
+// }
+
+// let a, b;
+// [a, b] = f();
+// console.log(a);
+// console.log(b);
+
+//EX 4
+
+// function g() {
+//     return [44,25,35]
+// }
+// const [m, ,o] = g();
+// console.log(m)
+// console.log(o)
+
+//EX 5
+
+// function h(){
+//     return [24, 25, 86, 57];
+// }
+// const [a, ...b] = h();
+// const [...f] = h()
+// console.log(b);
+// console.log(f)
+
+//Challenge -------------
+
+// const colors = ["red", "green", "blue", "yellow", "pink", "White", "black"];
+
+// let [color1, color2, color3, ...colorRest] = colors;
+// console.log(color1)
+// console.log(color2)
+// console.log(colorRest)
+
+//Object destructuring++++++++++
+
+// const student = {name: "HuXn", position: "First", rollNo: 27};
+
+// const{name, position, rollNo} = student;
+// console.log(name,position,rollNo)
+
+// const person = {
+//     name: "Jhon Doe",
+//     age: 30,
+//     gender: "male",
+//     country: "USA",
+// }
+
+// const{country, name, age} = person; //Name should same as key 
+// console.log(country)
+// console.log(name)
+// console.log(age)
+
+//Renaming of variable++++++++++++
+
+// const num = {x: 100, y:200};
+
+// const {x: new1, y: new2} = num;
+// console.log(new1);
+// console.log(new2);
+
+// Object destructuring and rest operator+++++++++
+
+// let{a, b, ...rest} = {a:100, b:200, c:300, d:400, e:500};
+
+// console.log(a) 
+// console.log(b) 
+// console.log(rest) 
+
+// const person = {
+//     name: "Jhon Doe",
+//     age: 30,
+//     gender: "male",
+//     country: "usa",
+// }
+
+// const {name: personName, age: personAge, country: personCountry} = person;
+
+// console.log(personName)
+// console.log(personAge)
+// console.log(personCountry)
+
+//Function destructuring+++++++++
+// const person = {
+//     name: "Jhon Doe",
+//     age: 20,
+//     country: "USA"
+// }
+
+// function printPersonInfo({name, age, country}) {
+//     console.log(`Name: ${name}`)
+//     console.log(`Age: ${age}`)
+//     console.log(`Country: ${country}`)
+// }
+
+// printPersonInfo(person);
+
+// let options = {
+//     title: "My menu",
+//     items: ["item1", "item2"],
+// };
+
+// function showMenu({
+//     title,
+//     width: w = 100,
+//     height: h = 200,
+//     items: [item1, item2],
+// }) {
+//     console.log(`${title} ${w} ${h} `)
+//     console.log(`${item1}`)
+//     console.log(`${item2}`)
+// }
+// showMenu(options);
+
+//Nested destructuring+++++++++++++
+
+// const songs = [
+//     {name: "Lucky you", singer: "Joyner", duration: 4.34},
+//     {name: "Just like you", singer: "NF", duration: 3.23},
+//     {name: "humble singer", singer: "Kendrick lamar", duration: 2.33},
+//     {name: "old town road", singer: "lil nas x", duration: 5.23},
+//     {name: "cold sholder", singer: "central cee", duration: 5.23},
+// ]
+
+// const [,,,{singer}] = songs;
+// const [,,,{duration}] = songs;
+// console.log(singer);
+// console.log(duration);
