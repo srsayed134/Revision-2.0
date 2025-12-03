@@ -127,7 +127,25 @@
 
 //++++++++++++++++Objects ++++++++++++++
 
+const person : {firstName: string; lastName: string; age: number} = {
+    firstName: "Jhon",
+    lastName: "Doe",
+    age: 30
+}
 
+console.log(`Name: ${person.firstName} ${person.lastName} and age is ${person.age}`)
+
+//+++++++++++++++function +++++++++++++++
+
+function printUSer(): {name: string; age: number; location: string} {
+    return {
+        name: "HuXn",
+        age: 25,
+        location: "China",
+    };
+}
+
+console.log(printUSer())
 
 
 
