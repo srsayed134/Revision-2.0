@@ -1122,14 +1122,107 @@
 // console.log(findAlex)
 
 
-const posts = [
-    {id: 1, content: "Sad post"},
-    {id: 2, content: "Funny post"},
-    {id: 3, content: "Sad post"},
-];
+// const posts = [
+//     {id: 1, content: "Sad post"},
+//     {id: 2, content: "Funny post"},
+//     {id: 3, content: "Sad post"},
+// ];
 
-const postRes = posts.find((post) => post.id === 2);
-console.log(postRes);
+// const postRes = posts.find((post) => post.id === 2);
+// console.log(postRes);
 
-const res = posts.filter((post) => post.content === "Sad post");
-console.log(res)
+// const res = posts.filter((post) => post.content === "Sad post");
+// console.log(res)
+
+//Challenge+++++++++++++++++++++
+
+// const ages = [3, 10, 18, 20];
+// const adult = ages.filter((age) => age >=18);
+// console.log(adult)
+
+//Challenge+++++++++++++++++++++
+
+// let products = [
+//     {name: "Checkers", category: "Toys"},
+//     {name: "Harry Potter", category: "Books"},
+//     {name: "iPhon", category: "Electronics"},
+//     {name: "Learn PHP", category: "Books"},
+// ];
+
+// let product = [];
+
+// for(let i = 0; i < products.length; i++){
+//     if(products[i].category === "Books"){
+//         product.push(products[i])
+//     }
+// }
+// console.log(product)
+
+// let res = products.filter((product) => product.category === "Books");
+
+// console.log(res)
+
+//Every and some +++++++++++++++++(result in true and false)
+
+// const peoples = ["Huxn", "Jordan", "Alex"];
+// const peoples1 = ["Huxn", "Jhon", "Alex"];
+
+// const res1 = peoples.every((people) => people.length ===4);
+// console.log(res1) //false
+
+// const res2 = peoples1.every((person) => person.length === 4);
+// console.log(res2) //true
+
+// const res3 = peoples.some((peoples) => peoples.length === 4);
+// console.log(res3) //true
+
+// const res4 = peoples.filter((people) => (people.includes("Huxn")) && (people.length > 2));
+// console.log(res4)
+
+//Challenge---------------------
+
+// let products = [
+//     {name: "Checkers", catagory: "Toys"},
+//     {name: "Harry Potter", catagory: "Books"},
+//     {name: "iPhon", catagory: "Electronics"},
+//     {name: "Learn PHP", catagory: "Books"},
+// ];
+
+// let allProductsBooks = true;
+// let someProductsBooks = false;
+
+// for(let i = 0; i < products.length; i++){
+//     if(products[i].catagory ==="Books"){
+//         allProductsBooks = false;
+//     }else {
+//         someProductsBooks = true;
+//     }
+// }
+
+// let res = products.every((product) => product.catagory === "Books")
+// let res1 = products.some((product) => product.catagory === "Books")
+
+
+// console.log(res); //false
+// console.log(res1); //true
+
+
+//reduce() +++++++++++++++++++++
+
+ const numbers = [1, 2, 3, 4, 5];
+ const sum = numbers.reduce((p, c) => {
+    console.log(`Previous: ${p}`);
+    console.log(`Previous: ${c}`);
+    return p + c;
+ }, 0)
+
+ console.log(sum)
+
+ const peoples = [
+    {name: "HuXn WebDev" ,age: 19},
+    {name: "Alex mead" ,age: 29},
+    {name: "Mran griffin" ,age: 40},
+    {name: "Leo griff" ,age: 25},
+ ]
+
+ const res = peoples.reduce((p, c) => (c.age > p ? c.age  ), 0)
