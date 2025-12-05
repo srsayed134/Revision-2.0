@@ -127,25 +127,135 @@
 
 //++++++++++++++++Objects ++++++++++++++
 
-const person : {firstName: string; lastName: string; age: number} = {
-    firstName: "Jhon",
-    lastName: "Doe",
-    age: 30
-}
+// const person : {firstName: string; lastName: string; age: number} = {
+//     firstName: "Jhon",
+//     lastName: "Doe",
+//     age: 30
+// }
 
-console.log(`Name: ${person.firstName} ${person.lastName} and age is ${person.age}`)
+// console.log(`Name: ${person.firstName} ${person.lastName} and age is ${person.age}`)
 
 //+++++++++++++++function +++++++++++++++
 
-function printUSer(): {name: string; age: number; location: string} {
-    return {
-        name: "HuXn",
-        age: 25,
-        location: "China",
-    };
-}
+// function printUSer(): {name: string; age: number; location: string} {
+//     return {
+//         name: "HuXn",
+//         age: 25,
+//         location: "China",
+//     };
+// }
 
-console.log(printUSer())
+// console.log(printUSer())
+
+// ++++++++++++++++++++Type alliases+++++++++++++++++
+
+// type User = {
+//     name: string;
+//     age: number;
+//     location : string;
+// };
+
+// const printUserInfo = (user: User) => {
+//      return `Name: (${user.name}) Age: (${user.age}) Location: (${user.location})`;
+// }
+
+// const res = printUserInfo({name: "Alex", age:20, location: "USA"});
+// console.log(res)
+
+//++++++++++++++Optional properties++++++++++++
+
+// type User = {
+//     name: string;
+//     age?: number;
+//     readonly location: string;
+// }
+
+// const user: User = {
+//     name: "HuXn",
+//     // age: 20,
+//     location: "China",
+// }
+
+// // user.location = "Japan" //location properties can not be changed for readonly
+
+// console.log(user)
+
+//++++++++++++++intersection type+++++++++++++
+
+// type UserInfo = {
+//     first: string;
+//     last: string;
+//     age: Number;
+// }
+
+// type AccountDetails = {
+//     email: string;
+//     password: string;
+// }
+
+// type User = UserInfo & AccountDetails;
+
+// const huxn: User = {
+//     first: "HuXn",
+//     last: "Lee",
+//     age: 25,
+//     email: "huxn@gmail.com",
+//     password: "securePassword123",
+// }
+
+// console.log(`Name: ${huxn.first} ${huxn.last}`)
+
+//+++++++++++++++++++Unions+++++++++++++++
+
+// let password : string | number = 20
+
+// type UserInfo = {
+//     first: string;
+//     last: string;
+//     age: number;
+// }
+
+// type AccountDetails = {
+//     email: string;
+//     password: string;
+// }
+
+// let user: UserInfo | AccountDetails = {
+//     email: "someone@gmail.com",
+//     password: "ppa20",
+//     first: "Nik",
+//     last: "Nam",
+//     age: 25,
+// }
+// console.log(user)
+
+// const person: (string | number) []= [1, 5, 8, "Nim"]
+// console.log(person)
+
+//+++++++++++++++Literal Types+++++++++++++++
+
+// let color: "red" | "crimson" | "fusha" | true;
+// color = "red";
+// color = "crimson";
+// color = true;
+
+// let isTrue: true | false;
+// isTrue = true;
+
+// let numb: 5 | 2| 1| 3;
+// numb = 5;
+
+// //Objects
+// type Status = {
+//   status: "success" | "error" | "loading";
+// };
+
+// const action: Status = {
+//   status: "success",
+// };
+
+
+
 
 
 

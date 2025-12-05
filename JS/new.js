@@ -1209,20 +1209,43 @@
 
 //reduce() +++++++++++++++++++++
 
- const numbers = [1, 2, 3, 4, 5];
- const sum = numbers.reduce((p, c) => {
-    console.log(`Previous: ${p}`);
-    console.log(`Previous: ${c}`);
-    return p + c;
- }, 0)
+//  const numbers = [1, 2, 3, 4, 5];
+//  const sum = numbers.reduce((p, c) => {
+//     console.log(`Previous: ${p}`);
+//     console.log(`Previous: ${c}`);
+//     return p + c;
+//  }, 0)
 
- console.log(sum)
+//  console.log(sum)
 
- const peoples = [
-    {name: "HuXn WebDev" ,age: 19},
-    {name: "Alex mead" ,age: 29},
-    {name: "Mran griffin" ,age: 40},
-    {name: "Leo griff" ,age: 25},
- ]
+//  const peoples = [
+//     {name: "HuXn WebDev" ,age: 19},
+//     {name: "Alex mead" ,age: 29},
+//     {name: "Mran griffin" ,age: 40},
+//     {name: "Leo griff" ,age: 25},
+//  ]
 
- const res = peoples.reduce((p, c) => (c.age > p ? c.age  ), 0)
+//  const res = peoples.reduce((p, c) => (c.age > p ? c.age :p ), 0)
+
+//  console.log(res);
+
+// const words = [
+//    "apple", "banana", "orange", "banana","apple", "orange", "apple", "grape",
+// ];
+
+// const wordFrequency = words.reduce((frequencyMap, word) => {frequencyMap[word] = (frequencyMap[word] || 0) + 1;
+//    return frequencyMap;
+// }, {})
+
+// console.log(wordFrequency)
+
+//Challenge+++++++++++++++++++++
+
+// const numbers = [2, 3, 4, 5];
+// const res = numbers.reduce((p, n) => {
+//    return p * n
+// }, 1);
+// console.log(res)
+
+//Map+++++++++++++++++++++++++++
+
