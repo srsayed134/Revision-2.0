@@ -1010,3 +1010,126 @@
 // }
 // numbers.forEach(adder);
 // console.log(sum)
+
+//Map method +++++++++++++++++++++ (create new array)
+
+// let numbers = [1, 5, 8, 7, 6];
+
+// let double = numbers.map((num) => num * 2)
+
+// console.log(double);
+
+// let peoples = [
+//     {firstName: "Macom", lastName: "Reynolds"},
+//     {firstName: "Kaylee", lastName: "Frye"},
+//     {firstName: "Jayne", lastName: "Cobb"},
+// ]
+
+// const res = peoples.map((person) => {
+//     return [person.firstName, person.lastName]
+// })
+
+// console.log(res)
+
+//Challenge ++++++++++++++++++
+
+// let numbers = [4, 88 , 99, 55];
+
+// //Ex:= 2
+// let multiply = numbers.map((num) => num * 10);
+// console.log(multiply);
+
+// //Ex=: 1
+// function myFunction(num) {
+//     return num * 10
+// }
+
+// const newwArr = numbers.map(myFunction);
+// console.log(newwArr)
+
+// const songs = [
+//     {name: "Lucky you",duration: 4.3},
+//     {name: "Munafeuq",duration: 3.3},
+//     {name: "Dilbara",duration: 2.3},
+//     {name: "Shajni",duration: 5.6},
+// ]
+
+// let hold = songs.filter(song => song.name.includes("u"));
+// console.log(hold)
+// let hold1 = songs.filter(song => song.duration > 4);
+// console.log(hold1)
+
+// const computers = [
+//     {ram:4, sdd: 120},
+//     {ram:8, sdd: 240},
+//     {ram:16, sdd: 360},
+//     {ram:32, sdd: 520},
+// ]
+
+// let gaterThanSixteen = computers.filter(computer => computer.ram > 16);
+
+// console.log(gaterThanSixteen)
+
+//Challenge+++++++++++++++++
+
+// const ages = [32, 33, 16, 40];
+
+//Ex:-1
+// let adult = ages.filter(num => num >= 18);
+// console.log(adult)
+
+//Ex:2
+
+// function checkAdult(age){
+//     return age >= 18
+// }
+
+// let adult = ages.filter(checkAdult);
+// console.log(adult)
+
+//Ex:-3
+
+// const words = [
+//     "spray",
+//     "Limit",
+//     "elite",
+//     "exuberant",
+//     "destruction",
+//     "present"
+// ]
+
+// let lengthmorethan6 = words.filter(word => word.length > 6);
+// console.log(lengthmorethan6)
+
+// function chechk(word){
+//     return word.length > 6
+// }
+
+// let res = words.filter(chechk);
+// console.log(res)
+
+//Find() ++++++++++++++++++++++ find first element
+
+// const peoples = [
+//     {name: "huxn", age: 17},
+//     {name: "jhon", age: 18},
+//     {name: "alex", age: 20},
+//     {name: "jimmy", age: 24},
+//     {name: "alex", age: 27},
+// ]
+
+// const findAlex = peoples.find((person) => person.name === "alex");
+// console.log(findAlex)
+
+
+const posts = [
+    {id: 1, content: "Sad post"},
+    {id: 2, content: "Funny post"},
+    {id: 3, content: "Sad post"},
+];
+
+const postRes = posts.find((post) => post.id === 2);
+console.log(postRes);
+
+const res = posts.filter((post) => post.content === "Sad post");
+console.log(res)
