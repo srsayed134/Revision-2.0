@@ -1323,3 +1323,58 @@
 
 //Symbol ++++++++++++++++ (leftOver)
 
+//++++++++++++++++++++++DOM ++++++++++++++++
+// console.dir(document.title);
+// console.log(document.body);
+// console.log(document.baseURI);
+
+//++++++++++++++DOM SELECTORS+++++++++++++
+// console.log(document.getElementsByTagName("h1").length);
+// console.log(document.getElementById("main"));
+// console.log(document.getElementsByClassName("cls")) //It will select first 
+// console.log(document.querySelector("h1"))
+// console.log(document.querySelector(".cls"))
+// console.log(document.querySelector("#main"))
+// console.log(document.querySelectorAll("h1"))
+// console.log(document.querySelectorAll("h1").length)
+
+// const anything = document.querySelector("h1");
+// console.log(anything)
+
+//++++++++++++++++innerText, textContent, innerHTML++++++++++
+
+// const p = document.querySelector("p");
+// console.log(p.innerText)
+// console.log(p.innerHTML)
+// console.log(p.textContent)
+
+//+++++++++++++++ClassList++++++++++++++++
+
+// const h1 = document.querySelector("#newStyles")
+// console.log(h1);
+
+// h1.classList.add("styles");
+// console.log(h1.classList);
+// h1.classList.remove("styles");
+// console.log(h1.classList);
+
+//++++++++++++++++Getting Setting Attributes+++++++++++++
+
+const a = document.querySelector(".fb");
+console.log(a.href)
+
+const b = document.querySelector(".yt");
+b.href = "www.youtube.com";
+console.log(b.href)
+
+const c = document.querySelector(".input1");
+console.log(c.value) //Example
+console.log(c.type) //text
+
+const d = document.querySelector(".input2");
+// d.value = "Example2"
+d.placeholder = "please password"
+console.log(d.value) //Example2
+
+console.log(d.getAttribute("type"))
+console.log(d.setAttribute("placeholder", "Email"))
