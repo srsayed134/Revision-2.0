@@ -1360,21 +1360,38 @@
 
 //++++++++++++++++Getting Setting Attributes+++++++++++++
 
-const a = document.querySelector(".fb");
-console.log(a.href)
+// const a = document.querySelector(".fb");
+// console.log(a.href)
 
-const b = document.querySelector(".yt");
-b.href = "www.youtube.com";
-console.log(b.href)
+// const b = document.querySelector(".yt");
+// b.href = "www.youtube.com";
+// console.log(b.href)
 
-const c = document.querySelector(".input1");
-console.log(c.value) //Example
-console.log(c.type) //text
+// const c = document.querySelector(".input1");
+// console.log(c.value) //Example
+// console.log(c.type) //text
 
-const d = document.querySelector(".input2");
-// d.value = "Example2"
-d.placeholder = "please password"
-console.log(d.value) //Example2
+// const d = document.querySelector(".input2");
+// // d.value = "Example2"
+// d.placeholder = "please password"
+// console.log(d.value) //Example2
 
-console.log(d.getAttribute("type"))
-console.log(d.setAttribute("placeholder", "Email"))
+// console.log(d.getAttribute("type"))
+// console.log(d.setAttribute("placeholder", "Email"))
+
+//+++++++++++++++Siblings+++++++++++++++++++++++
+
+// let firstLi = document.querySelector("#firstLi");
+// console.log(firstLi.parentElement) //ul
+// console.log(firstLi.parentElement.parentElement) //body
+// console.log(firstLi.parentElement.parentElement.parentElement) //html
+
+// let thirdLi = document.querySelector("#thirdLi")
+// let firstUl = document.querySelector("#firstUl");
+// console.log(firstUl.children)
+// console.log(firstUl.children[0])
+// console.log(firstUl.children[0].innerText) //1
+// console.log(firstUl.children[0].innerText = "one") //1
+// console.log(firstLi.nextElementSibling.textContent) //2
+
+// console.log(thirdLi.previousElementSibling.textContent)//
