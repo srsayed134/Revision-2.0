@@ -254,6 +254,34 @@
 //   status: "success",
 // };
 
+//+++++++++++++Tuples +++++++++++++++++++
+
+//++++++++++++++++++Destructuring Individual element+++++
+
+// let myTuple: [number, string];
+// myTuple = [10, "Hello World"];
+// console.log(myTuple)
+
+// // Ex: 1
+// const products: (number | string)[] = ["item-1", 15]
+// console.log(products) //[ 'item-1', 15 ]
+
+// //Ex: 2
+// const games: [string, number, string] = ["Game 1", "Game 2", "Game 3"];
+// console.log(games) //Error
+
+//+++++++++++++++Enums ++++++++++++++++
+
+// enum WeatherConditions {
+//     Sunny = "sunny",
+//     Cloudy = "cloudy",
+//     Rainy = "rainy",
+// }
+
+// console.log(WeatherConditions);
+
+// const currentWeather = WeatherConditions.Rainy;
+// console.log(`The current weather is ${currentWeather}`)
 
 
 
