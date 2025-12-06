@@ -1249,3 +1249,77 @@
 
 //Map+++++++++++++++++++++++++++
 
+// const map = new Map();
+
+// const keyOne = "huxn";
+// const keyTwo = {};
+// const keyThree = function() {};
+
+// map.set(keyOne, "Value of key one");
+// map.set(keyTwo, "Value of key two");
+// map.set(keyThree, "Value of key three");
+
+
+// console.log(map.keys())
+// console.log(map.values())
+// console.log(map.delete(keyTwo));
+// console.log(map.keys())
+
+// for(let [key, value] of map){
+//     console.log(`${key} -- ${value}`)
+// }
+
+//Challenge-------------------
+
+// const map = new Map();
+
+// const keyOne = "a";
+// const keyTwo = "b";
+// const keyThree = "c";
+
+// map.set(keyOne, 1);
+// map.set(keyTwo, 2);
+// map.set(keyThree, 3);
+
+// console.log(map.get("a"))
+// console.log(map.size);
+// map.delete("b");
+// console.log(map.size)
+
+//Set+++++++++++++++++++++++++
+
+// const initialValues = [1, 2, 2, 2, 2, 3];
+// const mySet = new Set(initialValues);
+
+// console.log(mySet)
+
+// const fruits = new Set();
+// fruits.add("apple");
+// fruits.add("banana");
+// fruits.add("orange");
+// fruits.add("apple");
+
+// console.log(fruits)
+// console.log(fruits.has("banana")) //true
+// fruits.delete("banana");
+// console.log(fruits.has("banana")) //false
+// console.log(fruits)
+
+// for (const fruit of fruits) {
+//     console.log(fruit)
+// }
+
+//Challenge----------------------
+
+// let letters = new Set();
+// letters.add("a")
+// letters.add("b")
+// letters.add("c");
+
+// console.log(letters);
+// for (const letter of letters) {
+//     console.log(letter)
+// }
+
+//Symbol ++++++++++++++++ (leftOver)
+
