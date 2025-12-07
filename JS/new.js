@@ -1395,3 +1395,69 @@
 // console.log(firstLi.nextElementSibling.textContent) //2
 
 // console.log(thirdLi.previousElementSibling.textContent)//
+
+//+++++++++++++++++++Styles ++++++++++++++++++++
+
+// const jsStyle = document.querySelector("#jsStyle");
+// // console.log(jsStyle.style);
+
+// // Ex:-1
+// // jsStyle.style.color = "red";
+// // jsStyle.style.backgroundColor = "blue";
+// // console.log(jsStyle.style.backgroundColor);
+
+// //Ex:-2
+// jsStyle.classList.add("jsStyle");
+//Challenge
+
+// jsStyle.style.height = "400px"
+// jsStyle.style.backgroundColor = "teal";
+// jsStyle.style.color = "skyblue";
+// jsStyle.style.fontFamily = "sans-serif"
+// jsStyle.style.color = "white";
+// jsStyle.style.color = "pink";
+
+//+++++++++++++++++++CreateElement, append, prepend, interAdject, removeChild, remove++++++++++++++++++++
+
+// const newh1 = document.createElement("h1");
+// const body = document.body
+// newh1.textContent = "Hello World 2"
+// newh1.classList.add("jsStyle");
+
+// body.appendChild(newh1);
+
+// const newUl = document.querySelector("#newUl");
+// const newli = document.createElement("li")
+
+// newli.innerText = "This is test";
+// newUl.appendChild(newli);
+
+// const newlist1 = document.querySelector("#new-list1");
+// newUl.insertBefore(newli, newlist1)
+
+// const newp = document.querySelector("#newp");
+// const i = document.createElement("i");
+// i.innerText = "I'am italics";
+// i.style.color = "skyblue";
+
+// newp.insertAdjacentElement("beforebegin", i)
+
+// let section = document.querySelector('#sec');
+// const i = document.createElement("i");
+// i.innerText = "I'm italics";
+// i.style.color = "skyblue";
+
+// const span = document.createElement("span");
+// span.innerText = "I'm italics";
+// span.style.color = "red";
+
+// section.append(i);
+// section.prepend(span);
+
+// const nelist = document.querySelector(".new-list");
+// const fourth = document.querySelector("#fourth");
+
+// nelist.removeChild(fourth); //it will remove child
+// nelist.remove(); //it will remove self
+
+
