@@ -9,7 +9,7 @@ btn.forEach((bt) => {
 })
 
 function changeBackground(color){
-    body.className="";
+    body.className=""; //it removes class from previous
     if (color === "purple") {
         body.classList.add("purple");
     }else if(color === "blue"){
