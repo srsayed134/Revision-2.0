@@ -1461,3 +1461,58 @@
 // nelist.remove(); //it will remove self
 
 
+//+++++++++++++++++++Event listner+++++++++++++
+//Bad way 
+// const secondBtn = document.querySelector(".second-btn") ;
+// secondBtn.onclick = function(){
+//     console.log("HuXn Webdeb")
+// }
+
+//Greet Way
+// const best = document.querySelector(".best");
+
+
+// best.addEventListener("click", () => console.log("Hello World"));
+
+//+++++++++++++++Event Object++++++++++++++
+//Ex:- 1
+// const para = document.querySelector(".para");
+// para.addEventListener("click", (event) => {
+//     console.log(event)
+// });
+
+//Ex: 2
+
+// const form1 = document.querySelector("#form1");
+// const input1 = document.querySelector("#input1");
+
+// form1.addEventListener("submit", (event) => {
+//     event.preventDefault();
+//     console.log(input1.value);
+// })
+//+++++++++++++++++Event in depth+++++++++++++
+
+// const test2 = document.querySelector("#test2");
+
+// test2.addEventListener("click", () => {
+//     test2.classList.toggle("blue")
+// })
+
+// ++++++++++++ KeyBoard event++++++++++++++++
+
+// const input3 = document.querySelector("#input3");
+
+// input3.addEventListener("keyup", () => {
+//     console.log("Keuup")
+// })
+
+//++++++++++++++
+
+// input3.addEventListener("keypress", (e) => {
+//     console.log(e.charCode);
+//     console.log(e.code);
+//     console.log(e.ctrlKey);
+//     console.log(e.key);
+//     console.log(e.shiftKey);
+// })
+
