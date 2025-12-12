@@ -254,3 +254,19 @@
 
 //+++++++++++++++Classes +++++++++++++++++
 
+class Person {
+    constructor(fname, lname, age){
+        this.fname = fname;
+        this.lname = lname;
+        this.age = age;
+        this.userinfo = function(){
+            return `This is ${fname} ${lname} and ${age} years old`
+        }
+    }
+}
+
+const Jhon = new Person("Huxn", "Webdeb", 19);
+console.log(Jhon.fname)
+console.log(Jhon.lname)
+console.log(Jhon.age)
+console.log(Jhon.userinfo());
