@@ -254,19 +254,72 @@
 
 //+++++++++++++++Classes +++++++++++++++++
 
-class Person {
-    constructor(fname, lname, age){
-        this.fname = fname;
-        this.lname = lname;
-        this.age = age;
-        this.userinfo = function(){
-            return `This is ${fname} ${lname} and ${age} years old`
-        }
-    }
-}
+// class Person {
+//     constructor(fname, lname, age){
+//         //Instance Members
+//         this.fname = fname;
+//         this.lname = lname;
+//         this.age = age;
+//         this.userinfo = function(){
+//             return `This is ${fname} ${lname} and ${age} years old`
+//         }
+//     }
+     
+//     //Prototype Memebers
+//     greet(){
+//         return `Hello there is ${this.fname} ${this.lname}`
+//     }
 
-const Jhon = new Person("Huxn", "Webdeb", 19);
-console.log(Jhon.fname)
-console.log(Jhon.lname)
-console.log(Jhon.age)
-console.log(Jhon.userinfo());
+// }
+
+// const Jhon = new Person("Jhon", "Doe", 19);
+// console.log(Jhon.fname);
+// console.log(Jhon.lname);
+// console.log(Jhon.age);
+// console.log(Jhon.userinfo());
+// console.log(Jhon);
+// console.log(Jhon.greet());
+
+// //Class inheritence
+
+// class Programmer extends Person{
+//     constructor(fname, lname, age, pl, experience){
+//         super(fname, lname, age);
+//         this.pl = pl;
+//         this.experience = experience;
+//     }
+// }
+
+// const huxn = new Programmer("HuXn", "WebDev", 19, "Golang", 4);
+// console.log(huxn.greet());
+
+//Challenge-------------------
+
+// class Hero {
+//     constructor(name, level) {
+//         this.name = name;
+//         this.level = level;
+//     }
+
+//     greet(){
+//         return `This is ${this.name} and level is ${this.level}`
+//     }
+// }
+
+// const hero = new Hero("Jhonny", 25);
+// console.log(hero);
+
+// //Class inheritance-----------
+
+// class Mega extends Hero{
+//     constructor(name, level, spell){
+//         super(name, level);
+//         this.spell = spell;
+//     }
+// }
+
+// const TriSnake = new Mega("TriSnake", 26, "Fire");
+// console.log(TriSnake)
+// console.log(TriSnake.greet())
+
+
