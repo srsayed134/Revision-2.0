@@ -322,4 +322,114 @@
 // console.log(TriSnake)
 // console.log(TriSnake.greet())
 
+//+++++++++++OOP+++++++++++++++++
+//++++++++Modifire +++++++++++++
+
+//Private + Publi + Protected+++
+
+// function MyClass(publicField, privateField, protectedField){
+//     this.publicField = publicField;
+//     const _privateField = privateField;
+//     const _protectedField = protectedField;
+
+//     //Public
+//     this.publicMethod = function(){
+//         return `Public info:- ${this.publicField}`
+//     };
+
+//     //Private
+//     function _privateMethod(){
+//         return `Private Info: ${_privateField}`
+//     }
+
+//     //Protected
+//     function _protectedMethod(){
+//         return `Protected Method: ${_protectedField}`
+//     }
+
+//     this.accessProtectedMethod = function (){
+//         return _protectedMethod();
+//     }
+// }
+
+// const myObject = new MyClass("Public Data", "Private Data", "Proteced Data");
+// console.log(myObject.publicField);
+// console.log(myObject._privateField);
+// console.log(myObject._protectedMethod);
+
+// console.log(myObject.publicMethod())
+// // console.log(myObject._privateMethod())
+// // console.log(myObject._protectedMethod())
+// console.log(myObject.accessProtectedMethod())
+
+//Encapsulation---------------
+
+// function Counter(){
+//     let _count = 0;
+
+//     this.increment = function(){
+//         _count++;
+//     }
+
+//     this.decrement = function(){
+//         _count--;
+//     }
+
+//     this.getCount = function(){
+//         return _count
+//     }
+// }
+
+// const counter = new Counter();
+// console.log(counter.getCount()) //0
+// counter.increment(); //1
+// counter.increment(); //2
+// counter.increment(); //3
+// console.log(counter.getCount()) //3
+// counter.decrement(); //2
+// console.log(counter.getCount())//2
+// console.log(counter._count) //Undefined
+
+//Abstraction ------------------------
+
+// //+++++ Parent Classs +++++
+// class Animal {
+//     constructor(name) {
+//         this.name = name;
+//     }
+
+//     makeSound(){
+//         return `Mrthod must be implemented`;
+//     }
+// }
+
+// class Dog extends Animal {
+//     constructor(name){
+//         super(name)
+//     }
+
+//     makeSound() {
+//         return `Woff..`
+//     }
+// }
+
+// class Cat extends Animal {
+//     constructor(name){
+//         super(name)
+//     }
+
+//     makeSound() {
+//         return `Meow..`
+//     }
+// }
+
+// const dog = new Dog("Buddy");
+// console.log(dog.name);
+// console.log(dog.makeSound());
+
+// const cat = new Cat("Whisker");
+// console.log(cat.name);
+// console.log(cat.makeSound())
+
+
 
