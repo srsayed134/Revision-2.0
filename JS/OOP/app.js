@@ -499,4 +499,59 @@
 // console.log(Mike.name)
 // console.log(Mike.makeSound())
 
+//Polymorphism++++++++++++++++++++++
+
+class Animal {
+    constructor(name) {
+        this.name = name;
+    }
+
+    //This info is a superclass
+    info(){
+        return `${this.name} is a living things and help ecology to perform natural way`
+    }
+    
+    //This makesound is a superclass
+    makeSound(){
+        return `Unknown Sound`
+    }
+}
+
+class Dog extends Animal{
+    constructor(name){
+        super(name)
+    }
+
+    //This overriding method is polymorphism and subclass
+    makeSound(){
+        return `Woff...`
+    }
+}
+
+class Bird extends Animal{
+    constructor(name){
+        super(name);
+    }
+
+    //This method is for cat and overriding from Animal so it is called polymorphism and name subclass
+    makeSound(){
+        return `KUKU...`
+    }
+}
+
+ function animalInfo(animal){
+    console.log(`Name: ${animal.name}`)
+    console.log(`Name: ${animal.makeSound()}`) //Each of subinstance have own makesound method
+    console.log(`Name: ${animal.info()}`) //This is superclass
+ }
+
+ const genericAnimal = new Animal("Generic Animal");
+ const Mika = new Dog("Mika");
+ const Whisker = new Bird("Whisker");
+
+ animalInfo(genericAnimal);
+ animalInfo(Mika);
+ animalInfo(Whisker);
+
+
 
