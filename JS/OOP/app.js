@@ -431,5 +431,72 @@
 // console.log(cat.name);
 // console.log(cat.makeSound())
 
+//Inheritance-------------------
+
+//Prototype base---------------(ES 5)
+
+// function Animal(name){
+//     this.name = name;
+// }
+
+// Animal.prototype.makesound = function() {
+//     return "Unknown sound";
+// }
+
+// //Animal instance
+// const genericAnimal = new Animal("Generic Animal");
+// // console.log(genericAnimal.name);
+// // console.log(genericAnimal.makesound())
+
+// //Subclass constructor inheriting from animal
+// function Dog(name){
+//     Animal.call(this, name);
+// }
+
+// //Setup prototype chain for odg to inherit from Animal
+// Dog.prototype = Object.create(Animal.prototype)
+
+// //Specific method to dog
+// Dog.prototype.makesound = function(){
+//     return "Woff....."
+// }
+
+// //Dog instance
+// const shaperd = new Dog("Mike");
+// console.log(shaperd.name)
+// console.log(shaperd.makesound())
+
+//Class base-------------------(ES 6)
+
+// class Animal {
+//     constructor(name) {
+//         this.name = name
+//     }
+
+//     makeSound(){
+//         return `Unknown Sound...`
+//     }
+// }
+
+// const genericAnimal = new Animal ("Generic Animal")
+// console.log(genericAnimal)
+// console.log(genericAnimal.name)
+// console.log(genericAnimal.makeSound())
+
+
+// class Dog extends Animal{
+//     constructor(name) {
+//         super(name);
+//     }
+
+//     makeSound(){
+//         return `Woof...`
+//     }
+// }
+
+// const Mike = new Dog("mike");
+// console.log(Mike)
+// console.log(Mike.name)
+// console.log(Mike.makeSound())
 
 
