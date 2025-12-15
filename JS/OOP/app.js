@@ -501,57 +501,133 @@
 
 //Polymorphism++++++++++++++++++++++
 
-class Animal {
-    constructor(name) {
-        this.name = name;
-    }
+// class Animal {
+//     constructor(name) {
+//         this.name = name;
+//     }
 
-    //This info is a superclass
-    info(){
-        return `${this.name} is a living things and help ecology to perform natural way`
-    }
+//     //This info is a superclass
+//     info(){
+//         return `${this.name} is a living things and help ecology to perform natural way`
+//     }
     
-    //This makesound is a superclass
-    makeSound(){
-        return `Unknown Sound`
-    }
-}
+//     //This makesound is a superclass
+//     makeSound(){
+//         return `Unknown Sound`
+//     }
+// }
 
-class Dog extends Animal{
-    constructor(name){
-        super(name)
-    }
+// class Dog extends Animal{
+//     constructor(name){
+//         super(name)
+//     }
 
-    //This overriding method is polymorphism and subclass
-    makeSound(){
-        return `Woff...`
-    }
-}
+//     //This overriding method is polymorphism and subclass
+//     makeSound(){
+//         return `Woff...`
+//     }
+// }
 
-class Bird extends Animal{
-    constructor(name){
-        super(name);
-    }
+// class Bird extends Animal{
+//     constructor(name){
+//         super(name);
+//     }
 
-    //This method is for cat and overriding from Animal so it is called polymorphism and name subclass
-    makeSound(){
-        return `KUKU...`
-    }
-}
+//     //This method is for cat and overriding from Animal so it is called polymorphism and name subclass
+//     makeSound(){
+//         return `KUKU...`
+//     }
+// }
 
- function animalInfo(animal){
-    console.log(`Name: ${animal.name}`)
-    console.log(`Name: ${animal.makeSound()}`) //Each of subinstance have own makesound method
-    console.log(`Name: ${animal.info()}`) //This is superclass
- }
+//  function animalInfo(animal){
+//     console.log(`Name: ${animal.name}`)
+//     console.log(`Name: ${animal.makeSound()}`) //Each of subinstance have own makesound method
+//     console.log(`Name: ${animal.info()}`) //This is superclass
+//  }
 
- const genericAnimal = new Animal("Generic Animal");
- const Mika = new Dog("Mika");
- const Whisker = new Bird("Whisker");
+//  const genericAnimal = new Animal("Generic Animal");
+//  const Mika = new Dog("Mika");
+//  const Whisker = new Bird("Whisker");
 
- animalInfo(genericAnimal);
- animalInfo(Mika);
- animalInfo(Whisker);
+//  animalInfo(genericAnimal);
+//  animalInfo(Mika);
+//  animalInfo(Whisker);
+
+ //+++++++++++++++ Asynchronous +++++++++++
+
+//  //Sync code 
+//  function myFunc(){
+//     console.log("Inside function");
+//  }
+
+//  console.log("Start");
+//  myFunc();
+//  console.log("End");
+
+//  //Async code
+//  //Ex:- 1
+// console.log("Start");
+
+// setTimeout(() => {
+//     console.log("After two second")
+// }, 2000);
+
+// console.log("End")
+
+// Ex:- 2(callback hell)
+
+//This is valid async
+
+// function callBeckHell(callback){
+//     setTimeout(() => {
+//         const data = "Inside (callbeskHello) function"; //(1)
+//         console.log(data);
+//         callback(data)
+//     }, 2000);
+// }
+
+// function firstFunc(data, callback){
+//     setTimeout(() => {
+//         const data2 = `${data} - Processed First` //(2)
+//         console.log(data2);
+//         callback(data2)
+//     }, 2000);
+// }
+
+// function secondFunc(data, callback){
+//     setTimeout(() => {
+//         const data3 = `${data} - Processed Second`; //(3)
+//         console.log(data3);
+//         callback(data3)
+//     }, 2000);
+// }
+
+// callBeckHell((data) => {  //(1)
+//     firstFunc(data, (data2) => {  //(2)
+//         secondFunc(data2, (data3) => {  //(3)
+//              console.log(`Final result of all functions ${data3}`)
+//         })
+//     })
+// })
+
+//Callback is not always async
+//Example
+
+// console.log("Start");
+
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// numbers.forEach((num) => console.log(num));
+
+// console.log("End");
+
+//Example: ----------------------- (leftover)
+
+
+
+
+
+
+
 
 
 
