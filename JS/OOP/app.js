@@ -622,8 +622,69 @@
 
 //Example: ----------------------- (leftover)
 
+//++++++++++++++++Promise++++++++++++++++
 
+//Ex: -1
 
+// function numberCheck(number) {
+//     return new Promise((resolve, reject) => {
+//         if (number % 2 === 0) {
+//             resolve (`${number} this is even`)
+//         } else{
+//             reject (`${number} this is odd`)
+//         }
+//     })
+// }
+// const numberToCheck = 9;
+
+// numberCheck(numberToCheck)
+// .then((message) => {
+//     console.log(`Success: ${message}`)
+// })
+// .catch((message) => {
+//     console.log(`Failed: ${message}`)
+// })
+
+// //Ex: -2
+
+// function fetchData(){
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             const data = "Inside (callbackHell) Function";
+//             console.log(data);
+//             resolve(data);
+//         }, 2000);
+//     })
+// }
+
+// function firstFunc(data){
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             const processedData = `${data} - processed first`;
+//             console.log("Inside (firstFunc) Function");
+//             resolve(processedData)
+//         }, 2000);
+//     })
+// }
+
+// function secondFunc(data){
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             const processedData = `${data} - processed Second`;
+//             console.log("Inside (secondFunc) Function");
+//             resolve(processedData)
+//         }, 2000);
+//     })
+// }
+
+// fetchData()
+// .then((data) => firstFunc(data))
+// .then((processedData1) => secondFunc(processedData1))
+// .then((processedData2) => {
+//     console.log(`Final result of all functions with Promise: ${processedData2}`);
+// }).catch((error) => {
+//     console.error(`Error:`, error)
+// })
 
 
 
