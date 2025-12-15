@@ -686,9 +686,117 @@
 //     console.error(`Error:`, error)
 // })
 
+//++++++++++++++Async Func+++++++++++++
 
+// function fetchDataFromServer(){
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             resolve("User data retrieved from the server.");
+//         }, 4000);
+//     });
+// }
 
+// async function getUserData() {
+//     try {
+//         const data = await fetchDataFromServer();
+//         console.log(data);
+//         console.log("Remaining task can be executed here.");
+//     } catch (error) {
+//         console.log(error)
+//     }
+// }
 
+// getUserData()
 
+//Refoctoring callback / promise example to async awaits data
+
+// function fetchData(){
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             const data = "Inside data 1";
+//             console.log(data);
+//             resolve(data);
+//         }, 2000);
+//     })
+// }
+
+// function firstFunc(){
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             const data = "Inside data 2";
+//             console.log(data);
+//             resolve(data)
+//         }, 2000);
+//     })
+// }
+
+// function secondFunc(){
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             const data = "Inside data 3";
+//             console.log(data);
+//             resolve(data)
+//         }, 2000);
+//     })
+// }
+// function thirdFunc(){
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             const data = "Inside data 4";
+//             console.log(data);
+//             resolve(data)
+//         }, 2000);
+//     })
+// }
+
+// async function ProcessedDataWithAsyncAwait() {
+//     try {
+//         const data = await fetchData();
+//         const data1 = await firstFunc(data);
+//         const data2 = await secondFunc(data1);
+//         const data3 = await thirdFunc(data2);
+//         console.log(
+//             `Final result of all functions with await/async :${data3}`
+//         )
+
+//     } catch (error) {
+//         console.log(error)
+//     }
+// }
+
+// ProcessedDataWithAsyncAwait()
+
+//Challenge+++++++++++++++++++++++
+
+// function getUserDataFromDB(name){
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             console.log("Valid Name");
+//             console.log(name)
+//             resolve(name);
+//         }, 2000);
+//     })
+// }
+
+// function getUserHobbies(){
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             console.log(`Getting user hobbies...`);
+//             resolve(["Football", "Singing", "Solving Math"]);
+//         }, 2000);
+//     })
+// }
+
+// async function userinfo(name) {
+//     try {
+//         const data = await getUserDataFromDB(name);
+//         const data1 = await getUserHobbies(data);
+//         console.log(data1)
+//     } catch (error) {
+//         console.log(error)
+//     }
+// }
+
+// userinfo("Nikon")
 
 
