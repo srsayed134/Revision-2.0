@@ -800,3 +800,5 @@
 // userinfo("Nikon")
 
 
+//++++++++++++++ Reading Textual Data++++++++++++++ (leftover)
+
