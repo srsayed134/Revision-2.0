@@ -298,3 +298,116 @@
 // }
 
 // export default App
+
+//Challenge 8 ++++++++++++++++++
+
+// import React from 'react'
+// import Weather from './Components/Challenge8/Weather'
+// import UserStatus from './Components/Challenge8/UserStatus'
+// import Greeting from './Components/Challenge8/Greeting'
+
+// function App() {
+//   return (
+//     <div>
+//       <Weather/>
+//       <UserStatus 
+//       isLoggedIn = {true}
+//       isAdmin = {true}
+//       />
+//       <Greeting 
+      
+//       timeOfDay = "morning"
+
+//       />
+//     </div>
+//   )
+// }
+
+// export default App
+
+//++++++++++++++ Styling ++++++++++++
+
+// Ex:- 1 (inline css)
+ 
+// const App = () => {
+//     return (
+//         <section>
+//             <h1 style={{
+//             color: "red",
+//             backgroundColor: "Green",
+//             padding: "2rem"
+//             }} >Inline section</h1>
+//         </section>
+//     )
+// }
+// export default App;
+
+// Ex:- 2 (seperate object)
+
+// const App = () => {
+
+//     const styles = {
+//         color: "red",
+//         backgroundColor: "green",
+//         padding: "2rem",
+//     }
+    
+//     return (<section>
+//         <h1 style={styles}> Lorem, ipsum dolor. </h1>
+//     </section>)
+// }
+
+// export default App;
+
+// Ex:- 3 (seperate file)
+
+// import "./index.css/"
+
+// const App = () => {
+//     return (
+//         <section>
+//             <h1>Lorem, ipsum dolor.</h1>
+//         </section>
+//     )
+// }
+
+// export default App;
+
+//+++++++++++++++++ Ading icon +++++++++
+
+// import "./index.css/"
+// import { FaCartArrowDown } from "react-icons/fa";
+// import { FaBuilding } from "react-icons/fa";
+
+
+
+// const App = () => {
+//     return (
+//         <section>
+//             <h2>Lorem, ipsum dolor.</h2>
+//             <FaCartArrowDown /> <br />
+//             <FaBuilding />
+//         </section>
+//     )
+// }
+
+// export default App;
+
+//Challenge ++++++++++++++++++++++
+
+import React from 'react'
+import StyleCard from './Components/Challenge9/StyleCard'
+import ProfileCard from './Components/Challenge9/ProfileCard'
+import IconComponent from './Components/Challenge9/IconComponent'
+
+function App() {
+  return (
+    <div>
+        <StyleCard/>
+        <ProfileCard/>
+        <IconComponent/>
+    </div>
+  )
+}
+
+export default App
