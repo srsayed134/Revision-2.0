@@ -5,10 +5,7 @@ import { FaBeer } from "react-icons/fa";
 function IconComponent() {
   return (
     <div>
-        <h1 style={{
-        fontSize: "30px",
-        color: "gold",
-        }}><FaBeer/></h1>
+        <h1><FaBeer color={"gold"} size={"50px"}/></h1>
     </div>
   )
 }

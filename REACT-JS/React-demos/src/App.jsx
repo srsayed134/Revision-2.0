@@ -395,19 +395,85 @@
 
 //Challenge ++++++++++++++++++++++
 
-import React from 'react'
-import StyleCard from './Components/Challenge9/StyleCard'
-import ProfileCard from './Components/Challenge9/ProfileCard'
-import IconComponent from './Components/Challenge9/IconComponent'
+// import React from 'react'
+// import StyleCard from './Components/Challenge9/StyleCard'
+// import ProfileCard from './Components/Challenge9/ProfileCard'
+// import IconComponent from './Components/Challenge9/IconComponent'
 
-function App() {
-  return (
-    <div>
-        <StyleCard/>
-        <ProfileCard/>
-        <IconComponent/>
-    </div>
-  )
-}
+// function App() {
+//   return (
+//     <div>
+//         <StyleCard/>
+//         <ProfileCard/>
+//         <IconComponent />
+//     </div>
+//   )
+// }
 
-export default App
+// export default App
+
+//+++++++++++++++++++++ Event +++++++++++++
+
+//Ex:- 1
+
+// const Button = () => {
+//     return (
+//         <button onClick={() => console.log(Math.round(Math.random() * 100 ))}>
+//             Click
+//         </button>
+//     )
+// }
+
+// const App = () => {
+//     return (
+//         <section>
+//             <Button/>
+//         </section>
+//     )
+// }
+
+// export default App
+
+// Ex:- 2
+
+// const Button = () => {
+
+//     const handleClick = () => console.log(Math.floor(Math.random() * 100))
+
+//     return(
+//          <button onClick={handleClick}>Click</button>
+//     )
+// }
+
+// const App = () => {
+//     return (
+//       <Button/>
+//     )
+// }
+// export default App
+
+//Ex:- 3
+
+// const Copy = () => {
+
+//     const chackedCopy = () => console.log("Do not copy")
+
+//     return (
+//          <p onMouseMove={chackedCopy}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur deserunt excepturi molestias ipsam numquam tempore ipsa nulla consectetur dignissimos doloremque.</p>
+//     )
+// }
+
+// import React from 'react'
+
+// function App() {
+//   return (
+//     <div>
+//         <Copy/>
+//     </div>
+//   )
+// }
+
+// export default App
+
+//+++++++++++++++State Hooks +++++++++++
+
