@@ -476,4 +476,222 @@
 // export default App
 
 //+++++++++++++++State Hooks +++++++++++
+// Ex: -1 (number)
 
+// import React, { useState } from 'react'
+
+
+// function App() {
+//     const [count, setCount] = useState(0);
+//     const [word, setWord] = useState("Huxn");
+
+//     const increment = () => setCount(count + 1);
+//     const decrement = () => setCount(count - 1)
+
+//   return (
+//     <div>
+//         <h1>{word}</h1>
+//         <h1>{count}</h1>
+//         <button onClick={increment}>+</button>
+//         <button onClick={decrement}>-</button>
+//     </div>
+//   )
+// }
+
+// export default App
+
+//Ex:- 2 (Array)
+
+// import React, { useState } from 'react'
+
+// function App() {
+
+//   const [friend, setFriend] = useState(["Alex", "Jhon", "Niom", "Mahin"])
+//   const addOneFrien = () => setFriend([...friend, "Huxn"])
+//   const removeFriend = () => setFriend(friend.filter(f => f !== "Jhon"))
+//   const updateOneFriend = () => setFriend(friend.map(f => f === "Alex" ? "Alex Smith" : f))
+
+//   return (
+//     <div>
+//         {friend.map((f) => (
+//             <li key={f}>{f}</li>
+//         ))}
+//         <button onClick={addOneFrien}>Add new friend</button>
+//         <button onClick={removeFriend}>Remove new friend</button>
+//         <button onClick={updateOneFriend}>Update new friend</button>
+//     </div>
+//   )
+// }
+
+// export default App
+
+//Practice+++++++++++++++++++++
+
+
+// import React, { useState } from 'react'
+
+
+// function App() {
+
+//   const [friends, setFriends] = useState(["Alex", "Jhon", "Dimon", "Simon"])
+
+//   //Add newFriend 
+//   let newFriend = "Nikon"
+//   const addFriend = () => {
+//     return setFriends([...friends, newFriend])
+//   }
+
+//   //Remove slectFriend
+//   let selectFriend = "Alex"
+//   const removeFriend = () => {
+//     return setFriends(friends.filter(f => f !== selectFriend) )
+//   }
+
+//   //Update friend
+//   let updateFriend = "Jon"
+//   const updateFriends = () => {
+//     return setFriends(friends.map(f => f === "Jhon" ? updateFriend : f))
+//   }
+
+//   return (
+//     <div>
+//       <ul>{friends.map((f) => {return <li>{f}</li>})}</ul>
+//       <button onClick={addFriend}>Add New Friend</button>
+//       <button onClick={removeFriend}>Ramove one friend</button>
+//       <button onClick={updateFriends}>Update a friend</button>
+       
+
+//     </div>
+//   )
+// }
+
+// export default App
+
+// Ex:- 3 (object)
+
+// import React from 'react'
+// import { useState } from 'react'
+
+// function App() {
+
+//     const [movie, setMovie] = useState({
+//         title: "Equalizer 3",
+//         rating: 7,
+//         year : 2000
+//     })
+
+//     // const handleClick = () => {
+//     //     const copyMovies = {
+//     //         ...movie,
+//     //         rating: 5,
+//     //         title: "PK",
+//     //         year: 2005,
+//     //     }
+//     //     setMovie(copyMovies);
+//     // }
+
+//     const handleClick = () => {
+//         setMovie({...movie, rating: 5, title: "PK", year: 2009});
+//     }
+
+    
+
+//   return (
+//     <div>
+//         <h1>{movie.title}</h1>
+//         <h1>{movie.rating}</h1>
+//         <h1>{movie.year}</h1>
+
+//         <button onClick={handleClick}>Change Rating</button>
+//     </div>
+//   )
+// }
+
+// export default App
+
+//Practice ++++++++++++++++
+
+// import React, { useState } from 'react'
+
+// function App() {
+//   //Properties
+//   const [profile, setProfile] = useState([
+//     {id: 1, name: "Michel", profession: "Programmer"},
+//     {id: 2, name: "Christopher", profession: "Director"},
+//     {id: 3, name: "Rajamouli", profession: "Producer"},
+//   ]);
+  
+//   const [singleProfile, setsingleProfile] = useState(
+//     {name: "Sayed", age: 24, profession: "Unemployed"}
+//   )
+  
+//   //Update id 1 (full object)
+//   let updateFullName = {id: 1, name: "Sir michel", profession: "Programmer"};
+
+//   const updateProfile = () => {
+//     return setProfile(profile.map(p => p.id === 1 ? updateFullName : p))
+//   }
+  
+//   //Update id 2 (only name)
+//   let updateName = {name: "Christopher nolan"};
+
+//   const updateOnlyName = () => {
+//     return setProfile(profile.map(p => p.id === 2 ? {...p, ...updateName} : p))
+//   }
+  
+//   //Update object
+
+//   let updateFullObject = {name: "Sayedur Rahman", age: 25, profession: "Programmer"}
+
+//   const updateObject = () => {
+//     return setsingleProfile({...singleProfile, ...updateFullObject})
+//   }
+
+//   return (
+//     <div>
+//       <ul>{profile.map(p => <li key={p.id}>{p.name}</li>)}</ul>
+//       <ul>{profile.map(p => <li key={p.id}>{p.profession}</li>)}</ul>
+
+//       <button onClick={updateProfile}>Update full profile</button>
+//       <button onClick={updateOnlyName}>Update one name</button>
+
+//       <h1>{singleProfile.name}</h1>
+//       <h1>{singleProfile.age}</h1>
+//       <h1>{singleProfile.profession}</h1>
+
+//       <button onClick={updateObject}>Update info</button>
+//     </div>
+//   )
+// }
+
+// export default App
+
+//Ex:- 4 (Object inside Array)
+
+// import React from 'react'
+// import { useState } from 'react'
+
+// function App() {
+
+//     const [movies, setMovies] = useState([
+//         {id: 1, title: "PK", rating: 8.5},
+//         {id: 2, title: "RRR", rating: 7.5},
+//     ]);
+
+//     const handleClick = () => {
+//            setMovies(
+//             movies.map(m => m.id === 1 ? {...m, title: "3 idiots", rating: 8.9} : m))
+//     }
+
+
+//   return (
+//     <div>
+//         {movies.map(m => <li key={m.id}>{m.title}</li>)}
+//         {movies.map(m => <li key={m.id}>{m.rating}</li>)}
+
+//         <button onClick={handleClick}>Change Name</button>
+//     </div>
+//   )
+// }
+
+// export default App
