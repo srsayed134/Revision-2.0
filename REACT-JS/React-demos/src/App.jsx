@@ -695,3 +695,87 @@
 // }
 
 // export default App
+
+//++++++++++++++Share useState+++ (code1)
+
+// import React, { useState } from 'react'
+// import Comp1 from './Components/Code1(ShareState)/Comp1'
+// import Comp2 from './Components/Code1(ShareState)/Comp2'
+
+// function App() {
+
+//   const[count, setCount] = useState(0)
+
+//   return (
+//     <div>
+//       <Comp1 count = {count} onclickHandler = {() => setCount(count + 1)}/>
+//       <Comp2 count = {count} onclickHandler = {() => setCount(count - 1)}/>
+//     </div>
+//   )
+// }
+
+// export default App
+
+//++++++++++++++Import useState +++++++(code1)
+
+//Ex: 1
+
+// import React from 'react'
+// import Comp3 from './Components/Code1(ShareState)/Comp3'
+
+// function App() {
+//   return (
+//     <div>
+//       <Comp3/>
+//     </div>
+//   )
+// }
+
+// export default App
+
+//Ex: 2
+
+// import React from 'react'
+// import Comp4 from './Components/Code1(ShareState)/Comp4'
+
+// function App() {
+//   return (
+//     <div>
+//       <Comp4/>
+//     </div>
+//   )
+// }
+
+// export default App
+
+//++++++++++++Challenge (10)++++++++++++
+
+// Ex:- 1
+
+// import React from 'react'
+// import Counter from './Components/Challenge10/Counter';
+
+// function App() {
+//   return (
+//     <div>
+//         <Counter/>
+//     </div>
+//   )
+// }
+
+// export default App;
+
+//Ex:- 2
+
+import React from 'react'
+import TodoList from './Components/Challenge10/TodoList'
+
+function App() {
+  return (
+    <div>
+      <TodoList/>
+    </div>
+  )
+}
+
+export default App
