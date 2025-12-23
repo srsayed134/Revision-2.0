@@ -30,7 +30,7 @@
 //       <Greeting/>
 //       <ProductInfo/>
 //     </div>
-  
+
 //   )
 // }
 
@@ -55,7 +55,7 @@
 //     pl: "Golang"
 //   }
 //   ]
-  
+
 //   return (
 //     <div>
 //       {users.map((user) => (
@@ -115,7 +115,6 @@
 //   )
 // }
 
-
 // function User(props) {
 //   return (
 //     <div>
@@ -131,7 +130,6 @@
 //   )
 // }
 
-
 // export default App
 
 //Ex:-2 (by destructuring)+++++++++++++
@@ -141,7 +139,7 @@
 // function App() {
 //   return (
 //     <div>
-//       <User 
+//       <User
 //       img = "https://avatars.githubusercontent.com/u/183190177?v=4"
 //       name = "Sayed"
 //       age = {22}
@@ -151,7 +149,6 @@
 //     </div>
 //   )
 // }
-
 
 // function User({img, name, age, isMaried, hobbies}) {
 //   return (
@@ -221,7 +218,7 @@
 
 //+++++++++++++Conditional Rendering+++++++
 
-// Ex:-1 
+// Ex:-1
 
 // import React from 'react'
 
@@ -231,7 +228,7 @@
 // const Password = ({isValid}) => {
 //     // if (isValid) {
 //     //   return <ValidPassword/>
-//     // } 
+//     // }
 //     //   return <InvalidPassword/>
 
 //    return isValid ? <ValidPassword/> : <InvalidPassword/>
@@ -243,25 +240,24 @@
 //     <div>
 //          <Password
 //          isValid = {true}
-//          /> 
+//          />
 //     </div>
 //   )
 // }
 
 // export default App
 
-// Ex:2 
+// Ex:2
 
 // import React from 'react'
 
 // const ValidInput = () => <h1>Valid Pass</h1>
 // const InvalidtInput = () => <h1>InValid Pass</h1>
 
-// const Password = ({isValid}) => 
+// const Password = ({isValid}) =>
 //   isValid ? <ValidInput/> : <InvalidtInput/>
 
 // function App() {
-
 
 //   return (
 //     <div>
@@ -272,7 +268,7 @@
 
 // export default App
 
-//Ex: -3 
+//Ex: -3
 
 // import React from 'react'
 
@@ -286,7 +282,7 @@
 //     <ul>
 //         <h1>Products</h1>
 //         {items.map((item) => (
-//           <li key={Math.random()}>{item}</li> 
+//           <li key={Math.random()}>{item}</li>
 //         ))}
 //     </ul>
 //   </div>
@@ -310,12 +306,12 @@
 //   return (
 //     <div>
 //       <Weather/>
-//       <UserStatus 
+//       <UserStatus
 //       isLoggedIn = {true}
 //       isAdmin = {true}
 //       />
-//       <Greeting 
-      
+//       <Greeting
+
 //       timeOfDay = "morning"
 
 //       />
@@ -328,7 +324,7 @@
 //++++++++++++++ Styling ++++++++++++
 
 // Ex:- 1 (inline css)
- 
+
 // const App = () => {
 //     return (
 //         <section>
@@ -351,7 +347,7 @@
 //         backgroundColor: "green",
 //         padding: "2rem",
 //     }
-    
+
 //     return (<section>
 //         <h1 style={styles}> Lorem, ipsum dolor. </h1>
 //     </section>)
@@ -378,8 +374,6 @@
 // import "./index.css/"
 // import { FaCartArrowDown } from "react-icons/fa";
 // import { FaBuilding } from "react-icons/fa";
-
-
 
 // const App = () => {
 //     return (
@@ -480,7 +474,6 @@
 
 // import React, { useState } from 'react'
 
-
 // function App() {
 //     const [count, setCount] = useState(0);
 //     const [word, setWord] = useState("Huxn");
@@ -527,15 +520,13 @@
 
 //Practice+++++++++++++++++++++
 
-
 // import React, { useState } from 'react'
-
 
 // function App() {
 
 //   const [friends, setFriends] = useState(["Alex", "Jhon", "Dimon", "Simon"])
 
-//   //Add newFriend 
+//   //Add newFriend
 //   let newFriend = "Nikon"
 //   const addFriend = () => {
 //     return setFriends([...friends, newFriend])
@@ -559,7 +550,6 @@
 //       <button onClick={addFriend}>Add New Friend</button>
 //       <button onClick={removeFriend}>Ramove one friend</button>
 //       <button onClick={updateFriends}>Update a friend</button>
-       
 
 //     </div>
 //   )
@@ -594,8 +584,6 @@
 //         setMovie({...movie, rating: 5, title: "PK", year: 2009});
 //     }
 
-    
-
 //   return (
 //     <div>
 //         <h1>{movie.title}</h1>
@@ -620,25 +608,25 @@
 //     {id: 2, name: "Christopher", profession: "Director"},
 //     {id: 3, name: "Rajamouli", profession: "Producer"},
 //   ]);
-  
+
 //   const [singleProfile, setsingleProfile] = useState(
 //     {name: "Sayed", age: 24, profession: "Unemployed"}
 //   )
-  
+
 //   //Update id 1 (full object)
 //   let updateFullName = {id: 1, name: "Sir michel", profession: "Programmer"};
 
 //   const updateProfile = () => {
 //     return setProfile(profile.map(p => p.id === 1 ? updateFullName : p))
 //   }
-  
+
 //   //Update id 2 (only name)
 //   let updateName = {name: "Christopher nolan"};
 
 //   const updateOnlyName = () => {
 //     return setProfile(profile.map(p => p.id === 2 ? {...p, ...updateName} : p))
 //   }
-  
+
 //   //Update object
 
 //   let updateFullObject = {name: "Sayedur Rahman", age: 25, profession: "Programmer"}
@@ -682,7 +670,6 @@
 //            setMovies(
 //             movies.map(m => m.id === 1 ? {...m, title: "3 idiots", rating: 8.9} : m))
 //     }
-
 
 //   return (
 //     <div>
@@ -765,17 +752,130 @@
 
 // export default App;
 
-//Ex:- 2
+//Ex:- 2 (leftover)
 
-import React from 'react'
-import TodoList from './Components/Challenge10/TodoList'
+// import React from 'react'
+// import TodoList from './Components/Challenge10/TodoList'
+// import Profile from './Components/Challenge10/profile'
 
-function App() {
-  return (
-    <div>
-      <TodoList/>
-    </div>
-  )
-}
+// function App() {
+//   return (
+//     <div>
+//       {/* <TodoList/> */}
+//       <Profile/>
+//     </div>
+//   )
+// }
 
-export default App
+// export default App
+
+// Ex:- 3 (leftover)
+
+//+++++++++++++++ Portal +++++++++ (leftOver)
+//  import React from 'react'
+// import CopyInput from './Components/Code2(Copy)/CopyInput'
+
+//  function App() {
+//    return (
+//      <div>
+//         <CopyInput/>
+//      </div>
+//    )
+//  }
+
+//  export default App
+//++++++++++++++ Advance Keys +++++++++
+
+// import React from 'react'
+// import Switcher from './Components/Code3(Switcher)/Switcher'
+
+// function App() {
+//   return (
+//     <div>
+//         <Switcher/>
+//     </div>
+//   )
+// }
+
+// export default App
+
+//+++++++++++++++ UseEffect +++++++++++++
+
+// import React, { useEffect, useState } from 'react'
+
+// function App() {
+
+//   const [value, setValue] = useState(0);
+//   const [something, setSomething] = useState(0);
+
+//   useEffect(() => {
+//     console.log("Call useEffect")
+//     document.title = `Increment ${value}`
+//     document.title = `Increment ${something}` //Last assignment wins
+//   }, [value, something])
+
+//   return (
+
+//     <div>
+//       <h2>{value}</h2>
+//       <button onClick={() => setValue(value + 1)}>Click me</button>
+//       <h2>{something}</h2>
+//       <button onClick={() => setSomething(something + 1)}>Something</button>
+//     </div>
+//   )
+// }
+
+// export default App
+
+//++++++fetch data by useEffect++++++++++
+
+//** useEffect is using for control render each time */
+//** useEffect = side work (internet, timers, storage) */
+
+// import React, { useEffect, useState } from "react";
+
+// function App() {
+//   const [data, setData] = useState([]);
+
+//   useEffect(() => {
+//     async function getData() {
+//       const response = await fetch(
+//         "https://jsonplaceholder.typicode.com/posts"
+//       );
+//       const data = await response.json();
+//       if (data && data.length) setData(data);
+//     }
+//     getData();
+//   }, []); //Runs once when the component mounts (empty dependency array).
+
+//   return (
+//     <div>
+//       <ul>
+//         {data.map((item) => (
+//           <li key={item.id}>{item.title}</li>
+//         ))}
+//       </ul>
+//     </div>
+//   );
+// }
+
+// export default App;
+
+//+++++++++++Challenge 11++++++++++++++++
+
+// import React from 'react'
+// import BasicEffect from './Components/Challenge11/BasicEffect'
+// import CounterEffect from './Components/Challenge11/CounterEffect'
+// import FetchDataEffect from './Components/Challenge11/FetchDataEffect'
+
+// function App() {
+//   return (
+//     <div>
+//       {/* <BasicEffect/> */}
+//       {/* <CounterEffect/> */}
+//       <FetchDataEffect/>
+//     </div>
+//   )
+// }
+
+// export default App
