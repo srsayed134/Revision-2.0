@@ -927,5 +927,32 @@
 // export default App;
 
 
-//++++++++++++ useContext Hook +++++
+//++++++++++++ useContext Hook +++++(Code6)
+
+// import React, { createContext } from 'react'
+// import Comp1 from './Components/Code6(useContext)/Comp1';
+
+// export const Data = createContext()
+// export const Data1 = createContext()
+
+// function App() {
+
+//     let name = "Alex";
+//     let age = 23
+
+//   return (
+//     <div>
+//       <Data.Provider value={name}> 
+//         <Data1.Provider value={age}>
+//            <Comp1/>
+//         </Data1.Provider>
+//       </Data.Provider>
+//     </div>
+//   )
+// }
+
+// export default App
+
+//++++++++Challenge  ++++++++++
+
 
