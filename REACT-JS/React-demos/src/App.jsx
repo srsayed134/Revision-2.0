@@ -879,3 +879,53 @@
 // }
 
 // export default App
+
+//+++++++++++Pop driling+++++++++++(code 4)
+
+// import React from 'react'
+// import Comp1 from './Components/Code4(Pop driling)/Comp1';
+
+// function App() {
+
+//     const name = "Huxn";
+
+//   return (
+//     <div>
+//         <Comp1 name = {name}/>
+//     </div>
+//   )
+// }
+
+// export default App
+
+//+++++++++ Context API +++++++++++ (code 5)
+//Manage and share state to easy pop driling
+
+// import React, { createContext, useState } from "react";
+// import Code1 from "./Components/Code5(Context-API)/Code1";
+
+// export const Data = createContext();
+// export const Data1 = createContext();
+
+// function App() {
+//     let name = "Jhoon";
+//     let age = 18;
+
+
+//   return (
+//     <div>
+//       <Data.Provider value={name}>
+//         <Data1.Provider value={age}>
+//             <Code1/>
+//         </Data1.Provider>
+//       </Data.Provider>
+
+//     </div>
+//   );
+// }
+
+// export default App;
+
+
+//++++++++++++ useContext Hook +++++
+
