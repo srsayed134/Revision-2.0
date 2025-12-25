@@ -953,6 +953,22 @@
 
 // export default App
 
-//++++++++Challenge  ++++++++++
+//++++++++Challenge  ++++++++++(12)
+
+import React from 'react'
+import UserProfile from './Components/Challenge12/UserProfile'
+import UserProvider from './Components/Challenge12/UserContext'
+import UpdateUser from './Components/Challenge12/UpdateUser'
+
+function App() {
+  return (
+    <UserProvider>
+        <UserProfile/>
+        <UpdateUser/>
+    </UserProvider>
+  )
+}
+
+export default App
 
 
