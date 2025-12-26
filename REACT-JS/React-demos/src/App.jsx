@@ -911,7 +911,6 @@
 //     let name = "Jhoon";
 //     let age = 18;
 
-
 //   return (
 //     <div>
 //       <Data.Provider value={name}>
@@ -925,7 +924,6 @@
 // }
 
 // export default App;
-
 
 //++++++++++++ useContext Hook +++++(Code6)
 
@@ -942,7 +940,7 @@
 
 //   return (
 //     <div>
-//       <Data.Provider value={name}> 
+//       <Data.Provider value={name}>
 //         <Data1.Provider value={age}>
 //            <Comp1/>
 //         </Data1.Provider>
@@ -955,20 +953,63 @@
 
 //++++++++Challenge  ++++++++++(12)
 
-import React from 'react'
-import UserProfile from './Components/Challenge12/UserProfile'
-import UserProvider from './Components/Challenge12/UserContext'
-import UpdateUser from './Components/Challenge12/UpdateUser'
+// import React from 'react'
+// import UserProfile from './Components/Challenge12/UserProfile'
+// import UserProvider from './Components/Challenge12/UserContext'
+// import UpdateUser from './Components/Challenge12/UpdateUser'
 
-function App() {
-  return (
-    <UserProvider>
-        <UserProfile/>
-        <UpdateUser/>
-    </UserProvider>
-  )
-}
+// function App() {
+//   return (
+//     <UserProvider>
+//         <UserProfile/>
+//         <UpdateUser/>
+//     </UserProvider>
+//   )
+// }
 
-export default App
+// export default App
 
+// ++++++++++++ useReducer ++++++++++++
 
+// import React, { act, useReducer } from "react";
+
+// const initialState = { count: 0 };
+// const reducer = (state, action) => {
+//   if (action.type === "increment") {
+//     return { ...state, count: state.count + 1 };
+//   } else if (action.type === "decrement") {
+//     return { ...state, count: state.count - 1 };
+//   } else if (action.type === "reset") {
+//     return {...state, count: 0}
+//   } else{
+//     return state
+//   }
+// };
+
+// function App() {
+//   const [state, dispatch] = useReducer(reducer, initialState);
+
+//   return <div>
+//     <h1>Count {state.count}</h1>
+//     <button onClick={() => dispatch({type: "increment"})}>+</button>
+//     <button onClick={() => dispatch({type: "decrement"})}>-</button>
+//     <button onClick={() => dispatch({type: "reset"})}>*</button>
+//   </div>;
+// }
+
+// export default App;
+
+//+++++++++++++++++ Challenge (13) ++++++++
+
+// import React from 'react'
+// import Counter from './Components/Challenge13/Counter'
+
+// function App() {
+//   return (
+//     <div>
+//         <Counter/>
+//     </div>
+//   )
+// }
+
+// export default App
