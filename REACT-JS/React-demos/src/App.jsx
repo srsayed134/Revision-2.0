@@ -1012,4 +1012,56 @@
 //   )
 // }
 
+// +++++++++++++++ useRef +++++++++
+
+
+
+// import React, { useRef } from 'react'
+
+// function App() {
+
+//     const inputElement = useRef(null)
+//     console.log(inputElement)
+
+//     const focusInput = () =>{
+//         inputElement.current.focus()
+//         inputElement.current.value = "HuXn"
+//     }
+
+//   return (
+//     <div>
+//         <input type="text" ref={inputElement}/>
+//         <button onClick={() => focusInput()}>Focus and write huxn</button>
+//     </div>
+//   )
+// }
+
 // export default App
+
+//++++++++++++Challenge ++++++
+
+import React from 'react'
+import Timer from './Components/Challenge14/Timer'
+
+function App() {
+  return (
+    <div>
+        <Timer/>
+    </div>
+  )
+}
+
+export default App
+
+
+
+
+
+
+
+
+
+
+
+
+
