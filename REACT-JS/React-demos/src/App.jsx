@@ -1053,6 +1053,30 @@
 
 // export default App
 
+//Repractice 
+
+import React, { useRef } from 'react'
+
+function App() {
+
+  const element = useRef(null);
+  console.log(element)
+
+  const changeFocus = () => {
+    element.current.focus()
+    element.current.value = "HuXn"
+  }
+
+  return (
+    <div>
+       <input type="text" ref={element}/>
+       <button onClick={() => changeFocus()}>Focus</button>
+    </div>
+  )
+}
+
+export default App
+
 
 
 
