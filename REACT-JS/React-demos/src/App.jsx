@@ -1040,18 +1040,18 @@
 
 //++++++++++++Challenge ++++++
 
-import React from 'react'
-import Timer from './Components/Challenge14/Timer'
+// import React from 'react'
+// import Timer from './Components/Challenge14/Timer'
 
-function App() {
-  return (
-    <div>
-        <Timer/>
-    </div>
-  )
-}
+// function App() {
+//   return (
+//     <div>
+//         <Timer/>
+//     </div>
+//   )
+// }
 
-export default App
+// export default App
 
 
 
