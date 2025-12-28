@@ -1014,8 +1014,6 @@
 
 // +++++++++++++++ useRef +++++++++
 
-
-
 // import React, { useRef } from 'react'
 
 // function App() {
@@ -1053,39 +1051,51 @@
 
 // export default App
 
-//Repractice 
+//Repractice
 
-import React, { useRef } from 'react'
+// import React, { useRef } from 'react'
+
+// function App() {
+
+//   const element = useRef(null);
+//   console.log(element)
+
+//   const changeFocus = () => {
+//     element.current.focus()
+//     element.current.value = "HuXn"
+//   }
+
+//   return (
+//     <div>
+//        <input type="text" ref={element}/>
+//        <button onClick={() => changeFocus()}>Focus</button>
+//     </div>
+//   )
+// }
+
+// export default App
+
+//++++++++++++++ Custom hook +++++++++++
+
+import React, { useEffect, useState } from "react";
 
 function App() {
-
-  const element = useRef(null);
-  console.log(element)
-
-  const changeFocus = () => {
-    element.current.focus()
-    element.current.value = "HuXn"
-  }
+  const [data, setData] = useState(null);
+  
+  useEffect(() => {
+    fetch("https://jsonplaceholder.typicode.com/todos")
+      .then((res) => res.json())
+      .then((data) => setData(data));
+  }, []);
 
   return (
     <div>
-       <input type="text" ref={element}/>
-       <button onClick={() => changeFocus()}>Focus</button>
+      {data &&
+        data.map((item) => {
+          return <p key={item.id}>{item.title}</p>;
+        })}
     </div>
-  )
+  );
 }
 
-export default App
-
-
-
-
-
-
-
-
-
-
-
-
-
+export default App;
