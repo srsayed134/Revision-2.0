@@ -1077,25 +1077,46 @@
 
 //++++++++++++++ Custom hook +++++++++++
 
-import React, { useEffect, useState } from "react";
+// import React, { useEffect, useState } from "react";
+
+// function App() {
+//   const [data, setData] = useState(null);
+
+//   useEffect(() => {
+//     fetch("https://jsonplaceholder.typicode.com/todos")
+//       .then((res) => res.json())
+//       .then((data) => setData(data));
+//   }, []);
+
+//   return (
+//     <div>
+//       {data &&
+//         data.map((item) => {
+//           return <p key={item.id}>{item.title}</p>;
+//         })}
+//     </div>
+//   );
+// }
+
+// export default App;
+
+
+// +++++++++++++++ useFetch (7) +++++++++
+
+import React from 'react'
+import UseFetch from './Components/Code7(customHook)/useFetch'
 
 function App() {
-  const [data, setData] = useState(null);
-  
-  useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/todos")
-      .then((res) => res.json())
-      .then((data) => setData(data));
-  }, []);
+
+    const [data] = UseFetch("https://jsonplaceholder.typicode.com/todos")
 
   return (
     <div>
-      {data &&
-        data.map((item) => {
-          return <p key={item.id}>{item.title}</p>;
-        })}
+        {data && data.map((item => {
+            return <p key={item.id}>{item.title}</p>
+        }))}
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
