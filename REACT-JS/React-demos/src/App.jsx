@@ -1103,18 +1103,62 @@
 
 // +++++++++++++++ useFetch (7) +++++++++
 
+// import React from 'react'
+// import UseFetch from './Components/Code7(customHook)/useFetch'
+
+// function App() {
+
+//     const [data] = UseFetch("https://jsonplaceholder.typicode.com/todos")
+
+//   return (
+//     <div>
+//         {data && data.map((item => {
+//             return <p key={item.id}>{item.title}</p>
+//         }))}
+//     </div>
+//   )
+// }
+
+// export default App
+
+// +++++++++++ useId ++++++++++
+
+// import React, { useId } from 'react'
+
+// function App() {
+
+//     const id = useId();
+
+//   return (
+//     <div>
+//        <label htmlFor={`${id}-email`}>Email</label>
+//        <input type="email" id= {`${id}-email`}/>
+
+//        <br />
+
+//        <label htmlFor={`${id}-pass`}>Password</label>
+//        <input type="password" id={`${id}-pass`} />
+
+//     </div>
+//   )
+// }
+
+// export default App
+
+//Code (8) +++++++++
+
 import React from 'react'
-import UseFetch from './Components/Code7(customHook)/useFetch'
+import Unique from './Components/Code8(useId)/Unique'
 
 function App() {
-
-    const [data] = UseFetch("https://jsonplaceholder.typicode.com/todos")
-
   return (
     <div>
-        {data && data.map((item => {
-            return <p key={item.id}>{item.title}</p>
-        }))}
+        <Unique/>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, sit voluptatibus. Sunt ea consectetur inventore, nobis perspiciatis voluptates doloremque delectus?</p>
+
+        <Unique/>
+
+        {/* for both unique component react will create self id  */}
     </div>
   )
 }
