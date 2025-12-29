@@ -155,10 +155,78 @@
 
 //++++++++++++++++++++ DSA ARRAY ++++++++++++
 
+// const stringArr = ['a', 'c', "d", "e", "f"]
+// const numArr = [1, 2, 3, 4, 5]
+// const boolSrr = [true, false]
+// const mixed = ['a', 2, true, undefined, null, {a: "first"}, ["second"]];
 
+// console.log(mixed)
 
+//+++++++++++++Custom Array ++++++
 
+class MyArray{
+    constructor() {
+        this.length = 0;
+        this.data = {};
+    }
 
+    push(item){
+        this.data[this.length] = item;
+        this.length++;
+    }
+
+    get(position){
+        return this.data[position] 
+    }
+    pop(){
+        const lastItem = this.data[this.length - 1]
+        delete this.data[this.length - 1];
+        this.length--
+        return lastItem
+    }
+    shift(){
+        const firstItem = this.data[0];
+
+        //give every data plus one length
+        for(let  i = 0; i < this.length; i++){
+            this.data[i] = this.data[i + 1]
+        }
+        //and delete last one length
+        delete this.data[this.length - 1]
+        return firstItem;
+    }
+    remove(num){
+       const selectedItem = this.data[num];
+
+       
+       for(let i = num; i < this.length - 1; i++){
+           this.data[i] = this.data[i + 1]
+        }
+        
+        delete this.data[this.length - 1]
+        this.length--
+        return this.data
+        
+
+    } 
+}
+
+const myNewArray = new MyArray()
+// console.log(myNewArray);
+myNewArray.push("Apple");
+myNewArray.push("Orange");
+myNewArray.push("Banana");
+myNewArray.push("Mango");
+myNewArray.push("Guaba");
+// console.log(myNewArray.data)
+// console.log(myNewArray.get(0));
+// console.log(myNewArray.data)
+// console.log(myNewArray.pop())
+// console.log(myNewArray.data)
+
+// console.log(myNewArray.shift())
+console.log(myNewArray.data)
+console.log(myNewArray.remove(2))
 
 
 
