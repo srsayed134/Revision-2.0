@@ -1147,20 +1147,20 @@
 
 //Code (8) +++++++++
 
-import React from 'react'
-import Unique from './Components/Code8(useId)/Unique'
+// import React from 'react'
+// import Unique from './Components/Code8(useId)/Unique'
 
-function App() {
-  return (
-    <div>
-        <Unique/>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, sit voluptatibus. Sunt ea consectetur inventore, nobis perspiciatis voluptates doloremque delectus?</p>
+// function App() {
+//   return (
+//     <div>
+//         <Unique/>
+//         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, sit voluptatibus. Sunt ea consectetur inventore, nobis perspiciatis voluptates doloremque delectus?</p>
 
-        <Unique/>
+//         <Unique/>
 
-        {/* for both unique component react will create self id  */}
-    </div>
-  )
-}
+//         {/* for both unique component react will create self id  */}
+//     </div>
+//   )
+// }
 
-export default App
+// export default App
