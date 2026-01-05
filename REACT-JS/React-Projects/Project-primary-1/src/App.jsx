@@ -1,7 +1,9 @@
 import React from 'react'
 import CounterApp from './Components-Counter-1/CounterApp'
 import Todo from './Components-Todo-2/Todo'
-import Meals from './Comp-Meals/Meals'
+import Meals from './Components-Meals-3/Meals'
+import Calculator from './Components-Calc-4/Calculator'
+import Toggle from './Components-toggle-5/Toggle'
 
 function App() {
   return (
@@ -9,7 +11,8 @@ function App() {
       {/* <CounterApp/> */}
       {/* <Todo/> */}
       {/* <Meals/> */}
-      
+      {/* <Calculator/> */}
+      <Toggle/>
     </div>
   )
 }
