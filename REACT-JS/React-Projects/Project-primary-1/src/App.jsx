@@ -12,7 +12,7 @@ function App() {
       {/* <Todo/> */}
       {/* <Meals/> */}
       {/* <Calculator/> */}
-      <Toggle/>
+      {/* <Toggle/> */}
     </div>
   )
 }
