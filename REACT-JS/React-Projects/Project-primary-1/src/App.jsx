@@ -4,6 +4,7 @@ import Todo from './Components-Todo-2/Todo'
 import Meals from './Components-Meals-3/Meals'
 import Calculator from './Components-Calc-4/Calculator'
 import Toggle from './Components-toggle-5/Toggle'
+import HiddensearchBar from './Components-HiddenSearchBar-6/HiddensearchBar'
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       {/* <Meals/> */}
       {/* <Calculator/> */}
       {/* <Toggle/> */}
+      {/* <HiddensearchBar/> */}
     </div>
   )
 }
