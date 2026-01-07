@@ -1,4 +1,4 @@
-*{
+/* *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -27,5 +27,5 @@ input{
     outline: none;
     border: 1px solid white;
     border-radius: 2px;
-    box-shadow: 2px 2px 2px 1px rgb(35, 35, 35);
-}
+    box-shadow: 2px 2px 2px 1px rgb(35, 35, 34);
+} */

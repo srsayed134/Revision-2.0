@@ -5,6 +5,7 @@ import Meals from './Components-Meals-3/Meals'
 import Calculator from './Components-Calc-4/Calculator'
 import Toggle from './Components-toggle-5/Toggle'
 import HiddensearchBar from './Components-HiddenSearchBar-6/HiddensearchBar'
+import Testimonials from './Components-Testimonials-7/Testimonials'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       {/* <Calculator/> */}
       {/* <Toggle/> */}
       {/* <HiddensearchBar/> */}
+      {/* <Testimonials/> */}
     </div>
   )
 }
