@@ -3,13 +3,13 @@
 // // This is data structure
 // const students = ["Niom", "Michel", "Lenor", "Donald"];
 
-// // And this is algorithm 
+// // And this is algorithm
 // function findOne(allStudents, studentName){
 //     for (let i = 0; i < allStudents.length; i++) {
 //         if(allStudents[i] === studentName){
 //             console.log(`This ${studentName} is found and the position is ${i + 1}`)
 //             return; //This return stop function when it is true
-//         } 
+//         }
 //     }
 //     console.log(`This ${studentName} is not found`)
 // }
@@ -21,7 +21,7 @@
 
 //Big O notation helps us understand {how long} an algorithm will take to run or {how much} memory it will need as the amount of the amount of data it handles grows
 
-//  O(n) 
+//  O(n)
 
 //Signifies that the execution time of the algorithm grows linearl in prportion th the size of the input data (n).
 
@@ -41,7 +41,7 @@
 //     }
 //     }
 
-//     // n + n = 2n => O(2n) 
+//     // n + n = 2n => O(2n)
 //     // {you have to drop the constant to O(n)}
 // }
 
@@ -69,15 +69,15 @@
 
 // O(n)
 
-    // for(let q = 0; q < arr.length; q++){
-    //     console.log("---------", q)
-    // }
+// for(let q = 0; q < arr.length; q++){
+//     console.log("---------", q)
+// }
 
-    //So if we combine all the "O" operations it becomes O(n^2 + n)
-    //O(n^2) is a dominant term
-    //"n" is a non-dominant term
-    //So we remove the "non-dominant" term and we are only left with O(n^2)
-    //This way, we simplify our bigO
+//So if we combine all the "O" operations it becomes O(n^2 + n)
+//O(n^2) is a dominant term
+//"n" is a non-dominant term
+//So we remove the "non-dominant" term and we are only left with O(n^2)
+//This way, we simplify our bigO
 // }
 
 // let number = [1,2,3,4,5,6]
@@ -104,7 +104,7 @@
 //      for (let j = 0; j < groceries.length; j++) {
 //         if (groceries[j] === item){
 //             console.log(`Found ${item} 2`)
-//         }        
+//         }
 //      }
 
 //      // n + n = 2n -> O(2n)
@@ -113,7 +113,6 @@
 // findItem("Bread")
 
 // //O(1) -> O(1) constant time, signifies that the execution time of an algorithm remains constant regardless of the input size ---> imagine you have a box filled with items, and you know exectly where each item is located , to get a specific item, you go directly to its location, taking the same amount of time irrespective of how many items are in the box
-
 
 // const cars = ["Volvo", "Mitshubishi", "Honda", "Toyota"];
 // //O(1)
@@ -130,7 +129,7 @@
 // function findPairs(arr) {
 //     for (let i = 0; i < arr.length; i++) {
 //         for (let j = i + 1; j < arr.length; j++) {
-//               console.log(`Pair: ${arr[i]} ${arr[j]}`)            
+//               console.log(`Pair: ${arr[i]} ${arr[j]}`)
 //         }
 //     }
 // //O(n)
@@ -146,12 +145,7 @@
 
 // }
 
-
 // findPairs(number);
-
-
-
-
 
 //++++++++++++++++++++ DSA ARRAY ++++++++++++
 
@@ -164,69 +158,170 @@
 
 //+++++++++++++Custom Array ++++++
 
-class MyArray{
-    constructor() {
-        this.length = 0;
-        this.data = {};
-    }
+// class MyArray{
+//     constructor() {
+//         this.length = 0;
+//         this.data = {};
+//     }
 
-    push(item){
-        this.data[this.length] = item;
-        this.length++;
-    }
+//     push(item){
+//         this.data[this.length] = item;
+//         this.length++;
+//     }
 
-    get(position){
-        return this.data[position] 
-    }
-    pop(){
-        const lastItem = this.data[this.length - 1]
-        delete this.data[this.length - 1];
-        this.length--
-        return lastItem
-    }
-    shift(){
-        const firstItem = this.data[0];
+//     get(position){
+//         return this.data[position]
+//     }
+//     pop(){
+//         const lastItem = this.data[this.length - 1]
+//         delete this.data[this.length - 1];
+//         this.length--
+//         return lastItem
+//     }
+//     shift(){
+//         const firstItem = this.data[0];
 
-        //give every data plus one length
-        for(let  i = 0; i < this.length; i++){
-            this.data[i] = this.data[i + 1]
-        }
-        //and delete last one length
-        delete this.data[this.length - 1]
-        return firstItem;
-    }
-    remove(num){
-       const selectedItem = this.data[num];
+//         //give every data plus one length
+//         for(let  i = 0; i < this.length; i++){
+//             this.data[i] = this.data[i + 1]
+//         }
+//         //and delete last one length
+//         delete this.data[this.length - 1]
+//         return firstItem;
+//     }
+//     remove(num){
+//        const selectedItem = this.data[num];
 
-       
-       for(let i = num; i < this.length - 1; i++){
-           this.data[i] = this.data[i + 1]
-        }
-        
-        delete this.data[this.length - 1]
-        this.length--
-        return this.data
-        
+//        for(let i = num; i < this.length - 1; i++){
+//            this.data[i] = this.data[i + 1]
+//         }
 
-    } 
-}
+//         delete this.data[this.length - 1]
+//         this.length--
+//         return this.data
 
-const myNewArray = new MyArray()
-// console.log(myNewArray);
-myNewArray.push("Apple");
-myNewArray.push("Orange");
-myNewArray.push("Banana");
-myNewArray.push("Mango");
-myNewArray.push("Guaba");
+//     }
+// }
+
+// const myNewArray = new MyArray()
+// // console.log(myNewArray);
+// myNewArray.push("Apple");
+// myNewArray.push("Orange");
+// myNewArray.push("Banana");
+// myNewArray.push("Mango");
+// myNewArray.push("Guaba");
+// // console.log(myNewArray.data)
+// // console.log(myNewArray.get(0));
+// // console.log(myNewArray.data)
+// // console.log(myNewArray.pop())
+// // console.log(myNewArray.data)
+
+// // console.log(myNewArray.shift())
 // console.log(myNewArray.data)
-// console.log(myNewArray.get(0));
-// console.log(myNewArray.data)
-// console.log(myNewArray.pop())
-// console.log(myNewArray.data)
+// console.log(myNewArray.remove(2))
 
-// console.log(myNewArray.shift())
-console.log(myNewArray.data)
-console.log(myNewArray.remove(2))
+//Create reverse method by class
 
+// class MyString {
+//     constructor(str) {
+//         this.str = str;
+//     }
+//     reverse(){
+//         let reversed = "";
+//         for(let i = this.str.length - 1; i >= 0 ; i--){
+//             reversed += this.str[i]
+//         }
+//         return reversed;
+//     }
+// }
 
+// let name = "Siam"
+// let myStr = new MyString(name)
+// console.log(myStr.reverse())
+
+//Creat split method by class 
+
+// class MyString {
+//     constructor(str) {
+//         this.str = str;
+//     }
+
+//     split(sep1, sep2){
+//         let result = [];
+//         let fixSep = "";
+
+//         for (let i = 0; i < this.str.length; i++) {
+//             if(this.str[i] === sep1 || this.str[i] === sep2){
+//                 result.push(fixSep);
+//                 fixSep = "" //this clear for next letter (fixSep is temporary storage If you don’t reset it, it keeps old words So new words get added on top of old ones)
+//             } else{
+//                 fixSep += this.str[i] 
+//             }
+            
+//         }
+//         result.push(fixSep);
+//         return result
+//     }
+// }
+
+// let splitmethid = new MyString("i love,her");
+// console.log(splitmethid.split(" ", ","))
+
+//Challenge +++++++++(reverse stringe)
+
+// const reverString = str => str.split("").reverse().join("");
+// console.log(reverString("hello"))
+
+// +++++++++ Palindromes +++++++++++++
+
+// If the reverse string is equal to the original one then that world is a palindrome
+
+// cddc > cddc, abba > abba,
+
+// const str = "mom";
+// const reverseString = (str) => {
+//     return str.split("").reverse().join("")
+// }
+// if(reverseString(str) === str){
+//     console.log("Both input and output is sama")
+// }else{
+//     console.log("Both input and output is not same")
+// }
+// console.log(reverseString(str))
+
+//++++++++++++++++ Int reverse +++++++++++
+
+// let randomNumber = Math.floor(Math.random() * 1000);
+// const reverseNum = (num) => {
+//       let reversenumtostr = num.toString().split("").reverse().join("");
+//       let number = Number(reversenumtostr);
+//       return number
+// }
+
+// console.log(randomNumber)
+// console.log(reverseNum(randomNumber))
+
+//+++++++++++++++++ sentence Capitalization ++++++++
+
+// let smallLeter = "you know i am good";
+
+// const capitalize = sml => {
+//     return sml.toUpperCase()
+// }
+
+// console.log(capitalize(smallLeter))
+
+//++++++++++++++++++ world capitalize in sentence +++++++++++
+
+// const capitalize = (str) => {
+//   return str
+//     .toLowerCase()
+//     .split(" ")
+//     .map((word) => word[0].toUpperCase() + word.slice(1))
+//     .join(" ");
+// };
+
+// console.log(capitalize("you know me?"));
+
+//Challenge +++++++++++FizzBuzz++++++++++++
 
