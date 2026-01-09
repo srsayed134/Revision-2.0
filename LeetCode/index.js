@@ -20,3 +20,44 @@
 // }
 
 // console.log(twoSum(num, target))
+
+//practice - 2
+
+// let nums = [5, 8, 9, 6, 4];
+// let targets = 10;
+
+// function findCommon(nums, target){
+//     let pair = new Pair();
+
+//     for(let i = 0; i < nums.length; i++){
+//         let comp = target - nums[i];
+//         if(pair.has(comp)){
+//             return [pair.get(comp), i]
+//         } pair.set(nums[i], i)
+//     }
+//     return[]
+// }
+
+// console.log(findCommon(nums, targets))
+
+//For this you have to understand core knowledge of map,object, get, set, condition, loop, function, mathmatics
+
+// Leet code Add Two Numbers - 2
+
+let ppt = 807;
+let pt = 708;
+let t = [7, 0, 8];
+
+let a = [9,9,9,9,9,9,9];
+let b = [9,9,9,9];
+
+function twoSum(a, b){
+    let num1 = Number(a.join(''))
+    let num2 = Number(b.join(''))
+    let sum = num1 + num2;
+    let toArrayandReverse = sum.toString().split("").reverse();
+    let toNumber = toArrayandReverse.map(Number);
+    return toNumber
+}
+
+console.log(twoSum(a,b));
