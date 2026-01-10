@@ -22,7 +22,7 @@ function Testimonials() {
 
   const prev = () => {
     setCurrentIndex(
-      (currentIndex - 1 + testimonials.length) % testimonials.length
+      (currentIndex - 1 + testimonials.length) % teyesstimonials.length
     );
   };
 
