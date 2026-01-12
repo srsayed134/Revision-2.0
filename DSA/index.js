@@ -325,3 +325,18 @@
 
 //Challenge +++++++++++FizzBuzz++++++++++++
 
+// let randomNum = Math.floor(Math.random() * 100);
+// if (randomNum % 3 === 0 && randomNum % 5 === 0) {
+//     console.log("FizzBuzz")
+// }else if(randomNum % 3 === 0) {
+//     console.log("Fizz")
+// }else if(randomNum % 5 === 0){
+//     console.log("Buzz")
+// }else{
+//     console.log(randomNum);
+
+// }
+
+//Challenge +++++++++ MaxProfit +++++++++
+
+
