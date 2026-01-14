@@ -25,6 +25,10 @@
 // let isHard: boolean = false;
 // console.log(isHard)
 
+// Repractice:-1
+// let myName: string = "Lion";
+//annotation name and value have to be same type
+
 //++++++++++++++Type Inference+++++++++++
 
 // let tech = "TypeScript";
@@ -35,12 +39,13 @@
 // console.log(typeof tech) //string
 // console.log(typeof favNumber) //number
 // console.log(typeof isComplete) //Boolean
+ 
 
 //++++++++++++++++Any type+++++++++++++++
 
-// let color: any = "Crimson"; //this any will make it wild for all type
-// color = 20;
-// color = true
+// let color: any = "Crimson"; //this "any" will make the color variable wild for all type
+// color = 20; // No error
+// color = true // No error
 
 // console.log(color)
 
@@ -57,6 +62,17 @@
 
 // const multiplyNum = (num: number, num2: number) => num * num2;
 // console.log(multiplyNum(3, 5)) //parameter should equal with arguments
+
+// //PRac:- 2
+// function twoSum(num1: number,num2: string){
+//     return num1 + num2
+// }
+// console.log(twoSum(2 , "2")) //22 
+
+// function twoMultiple(num1, num2){
+//     return num1 * num2
+// }
+// console.log(twoMultiple(5, 8)) //it will give error because of not specifing type it automaticaly choose "any" type but answer should be 40
 
 
 //++++++++++++++++Default params value+++++++++++++++
@@ -75,12 +91,18 @@
 // const res = double(5, 9);
 // console.log(res)
 
+// function twoMult(x: number, y: number): number{
+//     return x * y;
+// }
+// console.log(twoMult(10, 25))
+
 //++++++++++++++++Void function++++++++++++++++++
 // function printMessage(message: string): void{
 //     console.log(`This is my ${message}`); //it in void and when we return it will error
 // }
 
 // printMessage("message");
+
 
 //++++++++++++++++Never +++++++++++++++++++++
 
