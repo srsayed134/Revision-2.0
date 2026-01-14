@@ -20,8 +20,8 @@ function App() {
   }
   const filteredItems = products.filter((product) => {
     return product.title
-      .toLowerCase()
-      .indexOf(query.toLowerCase()) !== -1
+      .toLocaleLowerCase()
+      .indexOf(query.toLocaleLowerCase()) !== -1
   })
   const handleChange = event => {
     setSelectedCategory(event.target.value);
@@ -64,9 +64,9 @@ function App() {
   return (
     <div>
       <Sidebar handleChange={handleChange}/>
-      <Nav />
-      <Recommended />
-      <Prodcuts />
+      <Nav query={query} handleInoutChange={handleInoutChange} />
+      <Recommended handleClick={handleClick}/>
+      <Prodcuts result={result}/>
     </div>
   )
 }

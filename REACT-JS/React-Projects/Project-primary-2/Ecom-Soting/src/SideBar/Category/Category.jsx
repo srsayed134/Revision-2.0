@@ -21,5 +21,5 @@ function Category({ handleChange }) {
     </div>
   </div>
 }
-
+ 
 export default Category

@@ -12,8 +12,8 @@ function Sidebar({handleChange}) {
             <h1>🛒</h1>
         </div>
         <Category handleChange={handleChange}/>
-        <Colors handleChange={handleChange}/>
         <Price handleChange={handleChange}/>
+        <Colors handleChange={handleChange}/>
     </section>
   )
 }
