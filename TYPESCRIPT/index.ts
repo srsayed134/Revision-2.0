@@ -184,6 +184,7 @@
 // const res = printUserInfo({name: "Alex", age:20, location: "USA"});
 // console.log(res)
 
+
 //++++++++++++++Optional properties++++++++++++
 
 // type User = {
@@ -277,6 +278,15 @@
 // };
 
 //+++++++++++++Tuples +++++++++++++++++++
+
+// let fruits: [string, string, number] = ["Mango", "Orange", 18];
+// console.log(fruits[0])
+// console.log(fruits[1])
+
+// let [first, second, third] = fruits;
+// console.log(first)
+// console.log(second)
+// console.log(third)
 
 //++++++++++++++++++Destructuring Individual element+++++
 
