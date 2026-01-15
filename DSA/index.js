@@ -339,4 +339,21 @@
 
 //Challenge +++++++++ MaxProfit +++++++++
 
+// const MaxProfit = price => {
+//     let minPrice = price[0];
+//     let maxProfit = 0;
+//     for(let i = 1; i <price.length; i++){
+//         const currentPrice = price[i];
+//         minPrice = Math.min(minPrice, currentPrice);
+//         const potentialProfit = currentPrice - minPrice;
+//         maxProfit = Math.max(maxProfit, potentialProfit);
+//         console.log(maxProfit)
+//     }
+//     return maxProfit
+// }
+
+// let prices = [7, 1, 5, 3, 6, 4];
+// let profit = MaxProfit(prices);
+// console.log("Maximum profit:", profit)
+
 
