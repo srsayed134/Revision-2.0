@@ -199,8 +199,8 @@
 //     location: "China",
 // }
 
-// // user.location = "Japan" //location properties can not be changed for readonly
-
+// // user.location = "Japan" //location properties can not be reassigned for readonly but it is not immutable so any method can be applied like push,pop
+ 
 // console.log(user)
 
 //++++++++++++++intersection type+++++++++++++
@@ -317,24 +317,134 @@
 
 //+++++++++++++++++OOP in typescript+++++++++++
 
-class Profile{
-    name: string;
-    age: number;
-    readonly location: string;
+// class Profile{
+//     name: string;
+//     age: number;
+//     readonly location: string;
 
-    constructor(name: string, age: number, place: string){
-        this.name = name
-        this.age = age;
-        this.location = place
+//     constructor(name: string, age: number, place: string){
+//         this.name = name
+//         this.age = age;
+//         this.location = place
 
-    }
-}
+//     }
+// }
 
-const person1 = new Profile("Jhon", 25, "Tokyo");
-console.log(person1)
-console.log(person1.name)
-console.log(person1.age)
-console.log(person1.location) 
+// const person1 = new Profile("Jhon", 25, "Tokyo");
+// console.log(person1)
+// console.log(person1.name)
+// console.log(person1.age)
+// console.log(person1.location) 
+
+//+++++++++++++++++++Access Modifiers++++++++++++++++
+
+// class Profile {
+//     public name: string;
+//     private surname: string;
+//     protected location: string;
+//     constructor(first: string, last: string, place: string) {
+//         this.name = first;
+//         this.surname = last;
+//         this.location = place;
+//     }
+//     getName():string {
+//         return `${this.name} ${this.surname} from ${this.location}`
+//     }
+//     getSurname(): string{
+//         return `this ${this.surname} is private only in profile` 
+//     }
+//     getLocation(): string{
+//         return `this ${this.location} is protected it only available by parents like function call`
+//     }
+// }
+
+// let person1 = new Profile("Joffrey", "Brathion", "Kings landing")
+// console.log(person1) //in console you see it because console compile file before typescript
+// console.log(person1.name);
+// // console.log(person1.surname); //error
+// // console.log(person1.location); //error
+// console.log(person1.getName()) 
+// console.log(person1.getSurname())
+// console.log(person1.getLocation())
+
+
+// class User extends Profile{
+//     constructor(first: string, last: string, place:string){
+//         super(first,last,place);
+//     }
+//     // getName(): string {
+//     //     return `${this.name} ${this.surname} from ${this.location}`
+//     // }
+//     showLocation(): string{
+//         return `this ${this.location} is protected access by call not in direct`;
+//     }
+//     // showSurname(): string{
+//     //     // return this.surname;
+//     // } in this subclass surname is not avaiable because surname is alaways private
+// }
+
+// const huxn = new User("Huxn", "Nim", "USA");
+// console.log(huxn) //in console you see it because console compile file before typescript
+// // console.log(huxn.surname) //error
+// // console.log(huxn.showSurname())
+// console.log(huxn.getName()); //error because surname is only access by Profile
+// console.log(huxn.showLocation());
+
+
+//+++++++++++Getters and setters ++++++++++++++
+
+// class MyClass {
+//     private _myProperty: number = 0;
+//     protected location: string = "Nim";
+
+//     get myProperty():number{
+//         return this._myProperty;
+//     }
+//     get myLocation():string{
+//         return this.location;
+//     }
+//     set myProperty(value: number){
+//         this._myProperty = value;
+//     }
+//     set myLocation(value: string){
+//         this.location = value
+//     }
+// } 
+// const myInstance = new MyClass();
+
+// console.log(`Current Value: ${myInstance.myProperty}`)
+// myInstance.myProperty = 10;
+// console.log(`Current Value: ${myInstance.myProperty}`)
+// console.log(`Current location: ${myInstance.myLocation}`)
+// myInstance.myLocation = "Nimkis";
+// console.log(`Current location: ${myInstance.myLocation}`)
+
+// //Chat gpt example (if you have both readonly and private,protected instance in object you can not reassign surname or can not be mutable surname
+// // for this we can create new Profile by factory method)
+// class Profile {
+//     private readonly surname: string;
+//     protected readonly location: string;
+
+//     constructor(last: string, place: string) {
+//         this.surname = last;
+//         this.location = place;
+//     }
+
+//     // create a new Profile with new surname
+//     withNewSurname(newSurname: string): Profile {
+//         return new Profile(newSurname, this.location);
+//     }
+
+//     getInfo() {
+//         return `${this.surname} from ${this.location}`;
+//     }
+// }
+
+// const p1 = new Profile("Brathion", "Kings Landing");
+// console.log(p1.getInfo()); // Brathion from Kings Landing
+
+// const p2 = p1.withNewSurname("Khan");
+// console.log(p2.getInfo()); // Khan from Kings Landing
 
 
 
