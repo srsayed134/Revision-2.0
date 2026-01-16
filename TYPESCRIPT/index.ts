@@ -190,7 +190,7 @@
 // type User = {
 //     name: string;
 //     age?: number;
-//     readonly location: string;
+//     readonly location: string; // readonly
 // }
 
 // const user: User = {
@@ -314,6 +314,28 @@
 
 // const currentWeather = WeatherConditions.Rainy;
 // console.log(`The current weather is ${currentWeather}`)
+
+//+++++++++++++++++OOP in typescript+++++++++++
+
+class Profile{
+    name: string;
+    age: number;
+    readonly location: string;
+
+    constructor(name: string, age: number, place: string){
+        this.name = name
+        this.age = age;
+        this.location = place
+
+    }
+}
+
+const person1 = new Profile("Jhon", 25, "Tokyo");
+console.log(person1)
+console.log(person1.name)
+console.log(person1.age)
+console.log(person1.location) 
+
 
 
 
