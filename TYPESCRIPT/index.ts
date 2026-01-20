@@ -446,6 +446,12 @@
 // const p2 = p1.withNewSurname("Khan");
 // console.log(p2.getInfo()); // Khan from Kings Landing
 
+//+++++++++++++++++++Interface ++++++++++++++++++++
+
+
+
+
+
 
 
 
