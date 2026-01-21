@@ -1,3 +1,4 @@
+//Props typed inline (props object)
 // // import React from 'react'
 
 // export default function User(props: {name:string; age:number; isStudent:boolean}) {
@@ -10,8 +11,9 @@
 //   )
 // }
 
-// Another
+// Another 
 
+//Inline type + destructuring
 // // import React from 'react'
 
 // function User({name, age, isStudent} : {name:string; age:number; isStudent:boolean}) {
@@ -27,6 +29,7 @@
 // export default User
 
 //Another 2 
+// Using type
 
 // import React from 'react'
 // type UserInfo = {
@@ -48,6 +51,7 @@
 // export default User
 
 //Another 3 
+// Using interface
 
 // interface UserInfo  {
 //     name: string;
@@ -68,6 +72,8 @@
 // export default User
 
 // //Another 4 
+// Using FC (FunctionComponent)
+
 // import type { FC } from 'react'
 
 // type UserInfo = {
@@ -89,3 +95,19 @@
 // export default User
 
 //Another: 5 Reactnodes
+
+// import React, { type ReactNode } from 'react'
+
+// interface UserShape{
+//    children:ReactNode;
+// }
+
+// function User({children} : UserShape) {
+//   return (
+//     <div>
+//         <h2>{children}</h2>
+//     </div>
+//   )
+// }
+
+// export default User
