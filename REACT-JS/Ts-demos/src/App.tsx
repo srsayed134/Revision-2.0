@@ -88,27 +88,27 @@
 // export default App
 
 //Challege : 2 (reuseable type)
-import AdminIfo from "./Components/Challenge2(reuseble type)/AdminIfo";
-import UserInfo from "./Components/Challenge2(reuseble type)/UserInfo";
+// import AdminIfo from "./Components/Challenge2(reuseble type)/AdminIfo";
+// import UserInfo from "./Components/Challenge2(reuseble type)/UserInfo";
 
-function App() {
-  return (
-    <div>
-      <UserInfo
-        userName="Alex"
-        email="alex@email.com"
-        age={28}
-        location={["Earth", "USA"]}
-      />
-      <AdminIfo 
-        userName="Alex"
-        email="alex@email.com"
-        age={28}
-        location={["Mars", "Unknown"]}
-        admin="Yes"
-        />
-    </div>
-  );
-}
+// function App() {
+//   return (
+//     <div>
+//       <UserInfo
+//         userName="Alex"
+//         email="alex@email.com"
+//         age={28}
+//         location={["Earth", "USA"]}
+//       />
+//       <AdminIfo
+//         userName="Alex"
+//         email="alex@email.com"
+//         age={28}
+//         location={["Mars", "Unknown"]}
+//         admin="Yes"
+//       />
+//     </div>
+//   );
+// }
 
-export default App;
+// export default App;
