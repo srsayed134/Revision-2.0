@@ -448,6 +448,93 @@
 
 //+++++++++++++++++++Interface ++++++++++++++++++++
 
+// //interface Example for object
+// interface Computer {
+//     name: string;
+//     ram: number;
+//     hdd: number;
+// }
+// const computerExample:Computer = {
+//     name: "i7",
+//     ram: 8,
+//     hdd: 500,
+// }
+// console.log(computerExample.name);
+
+// interface Movie{
+//     readonly name: string;
+//     ratings: number;
+//     genra?: string;
+// }
+
+// const indianfilm: Movie = {
+//     name: "PK",
+//     ratings: 7.5,
+// }
+// // console.log(indianfilm.name = "3idiots")
+// console.log(computerExample.name = "i8")
+
+//Interfaces for function
+
+// interface Math {
+//     (x: number, y: number): number;
+// }
+
+// const twoSum:Math = (x,y) => {
+//     let z = x + y;
+//     return z;
+// }
+// const twoMult:Math = (x,y) => {
+//     let z = x * y;
+//     return z
+// }
+// console.log(twoSum(5, 9))
+// console.log(twoMult(5, 9))
+
+//Interface for method 
+
+// interface Person {
+//     firstName: string;
+//     lastName: string;
+//     age: number;
+//     description(): void;
+// }
+
+// const Jhon: Person = {
+//     firstName: "Jhon",
+//     lastName: "Doe",
+//     age: 22,
+//     description(){
+//         console.log("Hello")
+//     }
+// }
+
+// function client(person: Person){
+//     console.log(`Hello ${person.firstName} ${person.lastName} and i am ${person.age} years old`);
+//     person.description();
+// }
+
+// client(Jhon);
+// //Use same interface for both object and funtion
+
+// interface Song {
+//     songName: string;
+//     singerName: string;
+//     printSongInfo(songName: string, singerName: string) : string;
+// }
+
+// const song1: Song = {
+//     songName: "Natural",
+//     singerName: "Fioon", 
+//     printSongInfo: (songName, singerName) => {
+//         return `Song: ${songName} ${singerName}`
+//     }
+// }
+
+// console.log(song1.songName)
+// console.log(song1.singerName)
+// console.log(song1.printSongInfo("Natural", "Fioon"))
+
 
 
 
