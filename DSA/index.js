@@ -357,3 +357,38 @@
 // console.log("Maximum profit:", profit)
 
 
+//Array chunk +++++++++++
+
+// function chunk(arr, size){
+//    let chunked = [];
+//    for(let i= 0; i < arr.length; i += size){
+//       let chunk = arr.slice(i, i + size);
+//       if(chunk.length === size){
+//          chunked.push(chunk)
+//       }
+//    }
+//    return chunked
+// }
+// let arr = [1,5,6,8,9,23,55];
+// let siz = 2;
+
+// console.log(chunk(arr, siz))
+
+//Two sum ++++++++++++++++
+
+let arr = [2, 7, 11, 15];
+let tar = 9;
+
+function findposition(arr, tar){
+   let position = [];
+for(let i = 0; i < arr.length; i++){
+   for(let j = 1; j < arr.length; j++){
+      if(arr[i] + arr[j] === tar){
+         position.push(i)
+         position.push(j)
+         return position;
+      }
+   }
+}
+}
+console.log(findposition(arr, tar));
