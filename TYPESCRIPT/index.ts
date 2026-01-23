@@ -578,7 +578,32 @@
 // myCar.start();
 // myCar.stop();
 
+//interface declaration merging 
 
+// interface Car{
+//     brand: string;
+//     start(): void;
+// }
+// interface Car{
+//     model: string;
+//     stop(): void;
+// }
+// //Declaration merging by two entity
+
+// const myCar: Car = {
+//     brand : "Toyota",
+//     model : "Crown",
+//     start(){
+//         console.log(`${this.brand} is starting and the car is ${this.model}`)
+//     },
+//     stop(){
+//         console.log(`${this.brand} is stoped and the model is ${this.model}`)
+//     }
+// }
+// console.log(myCar.brand);
+// console.log(myCar.model);
+// myCar.start()
+// myCar.stop()
 
 
 
