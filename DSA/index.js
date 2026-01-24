@@ -376,19 +376,110 @@
 
 //Two sum ++++++++++++++++
 
-let arr = [2, 7, 11, 15];
-let tar = 9;
+// let arr = [2, 7, 11, 15];
+// let tar = 9;
 
-function findposition(arr, tar){
-   let position = [];
-for(let i = 0; i < arr.length; i++){
-   for(let j = 1; j < arr.length; j++){
-      if(arr[i] + arr[j] === tar){
-         position.push(i)
-         position.push(j)
-         return position;
-      }
-   }
+// function findposition(arr, tar){
+//    let position = [];
+// for(let i = 0; i < arr.length; i++){
+//    for(let j = 1; j < arr.length; j++){
+//       if(arr[i] + arr[j] === tar){
+//          position.push(i)
+//          position.push(j)
+//          return position;
+//       }
+//    }
+// }
+// }
+// console.log(findposition(arr, tar));
+
+//++++++++++++Linked list +++++++++++++++++
+
+// //Node
+// class Node {
+//     constructor(value){
+//         this.head = value;
+//         this.next = null;
+//     }
+// }
+
+// class LinkedList{
+//     constructor(value){
+//         this.head = new Node(value);
+//         this.tail = this.head;
+//         this.length = 1;
+//     }
+
+//     push(value){
+//         let newNode = new Node(value);
+//         if (!this.head) {
+//             this.head = newNode;
+//             this.tail = newNode;
+//         }
+//         this.tail.next = newNode;
+//         this.tail = newNode;
+//         this.length++;
+//     }
+//     pop(){
+//         if (!this.head){
+//             return undefined;
+//         }
+//         let temp = this.head;
+//         let prev = this.head;
+
+//         while(temp.next){
+//             prev = temp;
+//             temp = prev.next;
+//         }
+//         this.tail = prev;
+//         this.tail.next = null;
+//         this.length--;
+
+//         if(this.length === 0){
+//             this.head = null;
+//             this.tail = null;
+//         }
+//         return temp;
+//     }
+// }
+
+// const myLinkedList = new LinkedList(1);
+// console.log(myLinkedList)
+// myLinkedList.push(2);
+// console.log(myLinkedList.pop())
+// myLinkedList.push(3);
+// myLinkedList.push(4);
+// console.log(myLinkedList)
+
+//Repractice 
+
+class Node {
+    constructor(value){
+        this.value = value;
+        this.next = null;
+    }
 }
+
+class LinkedList {
+    constructor(value){
+       this.head = new Node(value);
+       this.tail = this.head;
+       this.length = 1;
+    }
+    push(value){
+        let newNode = new Node (value);
+        if(!this.head){
+            this.head = newNode;
+            this.tail = newNode;
+        }
+        this.tail.next = newNode;
+        this.tail = newNode;
+        this.length++;
+    }
+
 }
-console.log(findposition(arr, tar));
+
+const myLinkedList = new LinkedList(1);
+console.log(myLinkedList)
+myLinkedList.push(2);
+console.log(myLinkedList)
