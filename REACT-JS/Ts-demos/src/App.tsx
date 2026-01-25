@@ -1,7 +1,6 @@
 //Basic 1( Types For Props) +++++++++++++++++++++
 //User tsx
 // import User from "./Components/User"
-
 // function App() {
 //   return (
 //     <div>
@@ -9,10 +8,13 @@
 //     </div>
 //   )
 // }
-
 // export default App
 
-//Reacnodes ++++++++++++
+import { useState } from "react"
+import UserProfile from "./Components/Challenge3(Usestate type)/UserProfile";
+import Todolist from "./Components/Challenge3(Usestate type)/Todolist";
+
+//Reactnodes ++++++++++++
 
 // import React from 'react'
 // import User from './Components/User'
@@ -112,3 +114,43 @@
 // }
 
 // export default App;
+
+//Use type in useState
+
+// import Counter from "./Components/Code1(Counter)/Counter"
+
+// function App() {
+//   return (
+//     <div>
+//         <Counter/>
+//     </div>
+//   )
+// }
+
+// export default App
+
+//Challenge 3 +++++++++++++
+
+
+// function App() {
+
+//   const [count, setCount] = useState<number>(0);
+
+//   const increment = () => {
+//     setCount(prevCount => prevCount + 1);
+//   }
+//   return (
+
+//     <div>
+//       <h1>Counter : {count}</h1>
+//       <button onClick={increment}>Increment</button>
+//       <UserProfile/>
+//       <Todolist/>
+//     </div>
+//   )
+// }
+
+// export default App
+
+//
+
