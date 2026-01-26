@@ -395,91 +395,64 @@
 
 //++++++++++++Linked list +++++++++++++++++
 
-// //Node
-// class Node {
-//     constructor(value){
-//         this.head = value;
-//         this.next = null;
-//     }
-// }
-
-// class LinkedList{
-//     constructor(value){
-//         this.head = new Node(value);
-//         this.tail = this.head;
-//         this.length = 1;
-//     }
-
-//     push(value){
-//         let newNode = new Node(value);
-//         if (!this.head) {
-//             this.head = newNode;
-//             this.tail = newNode;
-//         }
-//         this.tail.next = newNode;
-//         this.tail = newNode;
-//         this.length++;
-//     }
-//     pop(){
-//         if (!this.head){
-//             return undefined;
-//         }
-//         let temp = this.head;
-//         let prev = this.head;
-
-//         while(temp.next){
-//             prev = temp;
-//             temp = prev.next;
-//         }
-//         this.tail = prev;
-//         this.tail.next = null;
-//         this.length--;
-
-//         if(this.length === 0){
-//             this.head = null;
-//             this.tail = null;
-//         }
-//         return temp;
-//     }
-// }
-
-// const myLinkedList = new LinkedList(1);
-// console.log(myLinkedList)
-// myLinkedList.push(2);
-// console.log(myLinkedList.pop())
-// myLinkedList.push(3);
-// myLinkedList.push(4);
-// console.log(myLinkedList)
-
-//Repractice 
-
 class Node {
     constructor(value){
-        this.value = value;
+        this.head = value; 
         this.next = null;
-    }
+    } //{value, null}
 }
 
-class LinkedList {
+class NodeList { 
     constructor(value){
-       this.head = new Node(value);
-       this.tail = this.head;
-       this.length = 1;
+        this.head = new Node(value);
+        this.tail = this.head; 
+        this.length = 1; //{value(1),next}
     }
     push(value){
-        let newNode = new Node (value);
+        let newNode = new Node(value);
         if(!this.head){
-            this.head = newNode;
-            this.tail = newNode;
+           this.head = newNode;
+           this.tail = newNode
         }
-        this.tail.next = newNode;
-        this.tail = newNode;
-        this.length++;
+        this.tail.next = newNode; //Previous tail was {1,null} now null is now {2, null}
+        this.tail = newNode; //New tail is {2, null}
+        this.length++
     }
+    pop(){
 
+        if(!this.head){
+            return undefined;
+        }
+        //Creat temporary head as first item and previous item as head 
+        let temp = this.head;
+        let prev = this.head;
+
+        while(temp.next){ //are you the last element answer is "no" because in prevoius we use push method and in null we add newNode if any of temp.next variable findout null this will be the last element we know it by node creation has two proberty "head" and "next"  
+            prev = temp; //remember current temporary node as previous
+            temp = prev.next; //temp item will be next itwm
+        }
+
+        this.tail = prev; 
+        this.tail.next = null; 
+        this.length--;
+
+        if(this.length === 0){
+            this.head = null;
+            this.tail = null
+        }
+
+        return temp
+    }
 }
 
-const myLinkedList = new LinkedList(1);
-console.log(myLinkedList)
+const myLinkedList = new NodeList(1);
+//Push method 
 myLinkedList.push(2);
+myLinkedList.push(3);
+myLinkedList.push(4);
+myLinkedList.push(5);
+myLinkedList.push(6);
+console.log(myLinkedList);
+console.log(myLinkedList.pop());
+console.log(myLinkedList.pop());
 console.log(myLinkedList)
