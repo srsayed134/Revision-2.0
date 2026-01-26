@@ -474,7 +474,7 @@
 // // console.log(indianfilm.name = "3idiots")
 // console.log(computerExample.name = "i8")
 
-//Interfaces for function
+//Interfaces for function ++++++++++++++++
 
 // interface Math {
 //     (x: number, y: number): number;
@@ -491,7 +491,7 @@
 // console.log(twoSum(5, 9))
 // console.log(twoMult(5, 9))
 
-//Interface for method 
+//Interface for method ++++++++++++++++++
 
 // interface Person {
 //     firstName: string;
@@ -515,7 +515,7 @@
 // }
 
 // client(Jhon);
-// //Use same interface for both object and funtion
+ //Use same interface for both object and funtion --------
 
 // interface Song {
 //     songName: string;
@@ -535,7 +535,7 @@
 // console.log(song1.singerName)
 // console.log(song1.printSongInfo("Natural", "Fioon"))
 
-//Share interface 
+//Share interface ++++++++++++++
 
 // interface MovieDetails {
 //     readonly name: string;
@@ -559,7 +559,7 @@
 // const res = movie1.printMovieInfo("Jhon wick", 520, 7.3);
 // console.log(res)
 
-//Interface with classes
+//Interface with classes++++++++++++++++
 
 // interface Vehicle {
 //     start(): void;
@@ -578,7 +578,7 @@
 // myCar.start();
 // myCar.stop();
 
-//interface declaration merging 
+//interface declaration merging +++++++++++++++
 
 // interface Car{
 //     brand: string;
@@ -605,8 +605,51 @@
 // myCar.start()
 // myCar.stop()
 
+//+++++++++++++++++++++ Generics +++++++++++++++++++++
 
+//Ex: 1
+function printNumber(item: number, defaultValue: number):[number, number]{
+    return [item, defaultValue];
+}
+function printString(item: string, defaultValue: string):[string, string]{
+    return [item, defaultValue];
+}
+function printBoolean(item: boolean, defaultValue: boolean):[boolean, boolean]{
+    return [item, defaultValue];
+}
+function printAny(item: any, defaultValue: any): [any, any]{
+    return [item, defaultValue]
+} //this any is behave like normal function so we need to insert some typescript 
 
+const num = printNumber(12, 30);
+const str = printString("Nim", "Astrocal");
+const bool = printBoolean(true, false);
+const any = printAny(2, false);
+// console.log(num)
+// console.log(str)
+// console.log(bool)
+// console.log(any)
+
+//Refector ex: 1
+
+function customType<Anything>(item:Anything, defaultValue:Anything):[Anything, Anything]{
+    return [item, defaultValue]
+}
+
+const customNumber = customType<Number>(12, 15);
+const customBoolean = customType<Boolean>(true, false);
+const customString = customType<String>("Nim", "Astrocal");
+console.log(customNumber)
+console.log(customBoolean)
+console.log(customString)
+
+//With interface
+interface Dog {
+    name: string;
+    breed: string;
+}
+const customDog = customType<Dog>({name: "Buddy", breed: "Labradao"}, {name: "Default", breed: "Unknown"});
+console.log(customDog)
 
 
 
