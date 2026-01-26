@@ -9,11 +9,6 @@
 //   )
 // }
 // export default App
-
-import { useState } from "react"
-import UserProfile from "./Components/Challenge3(Usestate type)/UserProfile";
-import Todolist from "./Components/Challenge3(Usestate type)/Todolist";
-
 //Reactnodes ++++++++++++
 
 // import React from 'react'
@@ -131,6 +126,9 @@ import Todolist from "./Components/Challenge3(Usestate type)/Todolist";
 
 //Challenge 3 +++++++++++++
 
+// import { useState } from "react"
+// import UserProfile from "./Components/Challenge3(Usestate type)/UserProfile";
+// import Todolist from "./Components/Challenge3(Usestate type)/Todolist";
 
 // function App() {
 
@@ -152,5 +150,44 @@ import Todolist from "./Components/Challenge3(Usestate type)/Todolist";
 
 // export default App
 
-//
+//Usefer in type +++++++++++++
+// import Form from "./Components/Code2(form)/form";
 
+// function App() {
+//   return (
+//     <div>
+//       <Form/>
+//     </div>
+//   )
+// }
+
+// export default App
+
+//Challenge4+++++++++++++++(Focus input, Contact Form)
+
+// import FocusInput from "./Components/Challenge4(useRef)/FocusInput";
+
+// function App() {
+//   return (
+//     <div>
+//       <FocusInput />
+//     </div>
+//   );
+// }
+
+// export default App;
+
+//Contact form //Event handling
+// import ContactForm from "./Components/Challenge4(useRef)/ContactForm";
+// import EventHandling from "./Components/Challenge4(useRef)/EventHandling";
+
+// function App() {
+//   return (
+//     <div>
+//       {/* <ContactForm /> */}
+//       {/* <EventHandling/> */}
+//     </div>
+//   );
+// }
+
+// export default App;
