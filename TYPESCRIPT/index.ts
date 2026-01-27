@@ -607,52 +607,119 @@
 
 //+++++++++++++++++++++ Generics +++++++++++++++++++++
 
-//Ex: 1
-function printNumber(item: number, defaultValue: number):[number, number]{
-    return [item, defaultValue];
+// //Ex: 1
+// function printNumber(item: number, defaultValue: number):[number, number]{
+//     return [item, defaultValue];
+// }
+// function printString(item: string, defaultValue: string):[string, string]{
+//     return [item, defaultValue];
+// }
+// function printBoolean(item: boolean, defaultValue: boolean):[boolean, boolean]{
+//     return [item, defaultValue];
+// }
+// function printAny(item: any, defaultValue: any): [any, any]{
+//     return [item, defaultValue]
+// } //this any is behave like normal function so we need to insert some typescript 
+
+// const num = printNumber(12, 30);
+// const str = printString("Nim", "Astrocal");
+// const bool = printBoolean(true, false);
+// const any = printAny(2, false);
+// // console.log(num)
+// // console.log(str)
+// // console.log(bool)
+// // console.log(any)
+
+// //Refector ex: 1
+
+// function customType<Anything>(item:Anything, defaultValue:Anything):[Anything, Anything]{
+//     return [item, defaultValue]
+// }
+
+// const customNumber = customType<Number>(12, 15);
+// const customBoolean = customType<Boolean>(true, false);
+// const customString = customType<String>("Nim", "Astrocal");
+// console.log(customNumber)
+// console.log(customBoolean)
+// console.log(customString)
+
+// //With interface
+// interface Dog {
+//     name: string;
+//     breed: string;
+// }
+// const customDog = customType<Dog>({name: "Buddy", breed: "Labradao"}, {name: "Default", breed: "Unknown"});
+// console.log(customDog)
+
+//Generics with object keys ++++++++++
+
+// function getRandomKeyValuePair<T>(obj: { [key: string]: T }): {
+//   key: string;
+//   value: T | undefined;
+// } {
+//   const keys = Object.keys(obj);
+//   const randkey = keys[Math.floor(Math.random() * keys.length)]!;
+//   return { key: randkey, value: obj[randkey] };
+// }
+
+// const stringObject = { a: "apple", b: "banana", c: "cherry" };
+// const randomStringPair = getRandomKeyValuePair<string>(stringObject);
+// console.log(randomStringPair);
+
+//generics with array,number,object+++++++++++
+
+function filterArray<T>(array: T[], condition: (item: T) => boolean): T[]{
+    return array.filter((item) => condition(item));
 }
-function printString(item: string, defaultValue: string):[string, string]{
-    return [item, defaultValue];
+
+const numberArray = [1,2,3,4,5,6,7,8,9,10];
+const evenNumvers = filterArray<number>(numberArray, (num) => num % 2 === 0);
+
+const stringArr = ["apple", "banana", "cherry", "date"];
+const shortWords = filterArray<string>(stringArr, (word) => word.length < 6);
+
+interface Fruit {name: string; color: string}
+const fruitArray: Fruit[] = [
+    {name: "Apple", color: "Red"},
+    {name: "Orange", color: "Yellow"},
+    {name: "Watermelon", color: "Green"},
+    {name: "Chery", color: "Red"},
+]
+
+const redFruits = filterArray<Fruit>(fruitArray, (fruit) => fruit.color === "Red");
+
+console.log(evenNumvers)
+console.log(shortWords)
+console.log(redFruits)
+
+//Two generics++++++++++++++++++++
+
+// function reversePair<T, U>(value1: T, value2: U): [U, T] {
+//     return [value2, value1]
+// } //Input is string : T, number : U and output is number: U, string : T
+
+// const reversePairba = reversePair("Hello", 20);
+// console.log(reversePairba)
+
+//Generics with class ++++++++++++++++++
+
+class Box<T>{
+    private content : T;
+    constructor(initialContent : T){
+        this.content = initialContent;
+    }
+    getContent() : T {
+        return this.content
+    }
+    setContent(newContent: T){
+        this.content = newContent;
+    }
 }
-function printBoolean(item: boolean, defaultValue: boolean):[boolean, boolean]{
-    return [item, defaultValue];
-}
-function printAny(item: any, defaultValue: any): [any, any]{
-    return [item, defaultValue]
-} //this any is behave like normal function so we need to insert some typescript 
 
-const num = printNumber(12, 30);
-const str = printString("Nim", "Astrocal");
-const bool = printBoolean(true, false);
-const any = printAny(2, false);
-// console.log(num)
-// console.log(str)
-// console.log(bool)
-// console.log(any)
-
-//Refector ex: 1
-
-function customType<Anything>(item:Anything, defaultValue:Anything):[Anything, Anything]{
-    return [item, defaultValue]
-}
-
-const customNumber = customType<Number>(12, 15);
-const customBoolean = customType<Boolean>(true, false);
-const customString = customType<String>("Nim", "Astrocal");
-console.log(customNumber)
-console.log(customBoolean)
-console.log(customString)
-
-//With interface
-interface Dog {
-    name: string;
-    breed: string;
-}
-const customDog = customType<Dog>({name: "Buddy", breed: "Labradao"}, {name: "Default", breed: "Unknown"});
-console.log(customDog)
-
-
-
+const stingBox = new Box<string>("Hello TypeScript")
+console.log(stingBox.getContent())
+stingBox.setContent("Hello Javascript")
+console.log(stingBox.getContent())
 
 
 
