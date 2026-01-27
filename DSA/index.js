@@ -443,16 +443,47 @@ class NodeList {
 
         return temp
     }
+    unshift(value){
+       let newNode = new Node(value);
+
+       if(!this.head){
+         this.head = newNode;
+         this.tail = newNode;
+       } else {
+          newNode.next = this.head;
+          this.head = newNode;
+       }
+       this.length++
+       return this
+    }
+    shift(){
+       if(!this.head)return undefined;
+       let temp = this.head; //{head:1, next:{head:2, next:{head:3, next:null}}
+       this.head = temp.next;//{head:2, next:{head:3, next:null}}
+       //down of temp.next is first temp(461)
+       temp.next = null;
+       this.length--;
+       return temp;
+    }
 }
 
 const myLinkedList = new NodeList(1);
 //Push method 
 myLinkedList.push(2);
 myLinkedList.push(3);
-myLinkedList.push(4);
-myLinkedList.push(5);
-myLinkedList.push(6);
-console.log(myLinkedList);
-console.log(myLinkedList.pop());
-console.log(myLinkedList.pop());
-console.log(myLinkedList)
+// myLinkedList.push(4);
+// myLinkedList.push(5);
+// myLinkedList.push(6);
+// console.log(myLinkedList);
+
+//POP method
+// console.log(myLinkedList.pop());
+// console.log(myLinkedList.pop());
+// console.log(myLinkedList)
+
+//Shift mehtod
+// myLinkedList.unshift(5);
+// console.log(myLinkedList)
+
+//Unshift method
+console.log(myLinkedList.shift())
