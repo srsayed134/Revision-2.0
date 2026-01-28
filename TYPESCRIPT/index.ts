@@ -668,29 +668,29 @@
 
 //generics with array,number,object+++++++++++
 
-function filterArray<T>(array: T[], condition: (item: T) => boolean): T[]{
-    return array.filter((item) => condition(item));
-}
+// function filterArray<T>(array: T[], condition: (item: T) => boolean): T[]{
+//     return array.filter((item) => condition(item));
+// }
 
-const numberArray = [1,2,3,4,5,6,7,8,9,10];
-const evenNumvers = filterArray<number>(numberArray, (num) => num % 2 === 0);
+// const numberArray = [1,2,3,4,5,6,7,8,9,10];
+// const evenNumvers = filterArray<number>(numberArray, (num) => num % 2 === 0);
 
-const stringArr = ["apple", "banana", "cherry", "date"];
-const shortWords = filterArray<string>(stringArr, (word) => word.length < 6);
+// const stringArr = ["apple", "banana", "cherry", "date"];
+// const shortWords = filterArray<string>(stringArr, (word) => word.length < 6);
 
-interface Fruit {name: string; color: string}
-const fruitArray: Fruit[] = [
-    {name: "Apple", color: "Red"},
-    {name: "Orange", color: "Yellow"},
-    {name: "Watermelon", color: "Green"},
-    {name: "Chery", color: "Red"},
-]
+// interface Fruit {name: string; color: string}
+// const fruitArray: Fruit[] = [
+//     {name: "Apple", color: "Red"},
+//     {name: "Orange", color: "Yellow"},
+//     {name: "Watermelon", color: "Green"},
+//     {name: "Chery", color: "Red"},
+// ]
 
-const redFruits = filterArray<Fruit>(fruitArray, (fruit) => fruit.color === "Red");
+// const redFruits = filterArray<Fruit>(fruitArray, (fruit) => fruit.color === "Red");
 
-console.log(evenNumvers)
-console.log(shortWords)
-console.log(redFruits)
+// console.log(evenNumvers)
+// console.log(shortWords)
+// console.log(redFruits)
 
 //Two generics++++++++++++++++++++
 
@@ -703,23 +703,80 @@ console.log(redFruits)
 
 //Generics with class ++++++++++++++++++
 
-class Box<T>{
-    private content : T;
-    constructor(initialContent : T){
-        this.content = initialContent;
-    }
-    getContent() : T {
-        return this.content
-    }
-    setContent(newContent: T){
-        this.content = newContent;
+// class Box<T>{
+//     private content : T;
+//     constructor(initialContent : T){
+//         this.content = initialContent;
+//     }
+//     getContent() : T {
+//         return this.content
+//     }
+//     setContent(newContent: T){
+//         this.content = newContent;
+//     }
+// }
+
+// const stingBox = new Box<string>("Hello TypeScript")
+// console.log(stingBox.getContent())
+// stingBox.setContent("Hello Javascript")
+// console.log(stingBox.getContent())
+
+//Repractice ++++++++++++++++++++++++
+
+// class Home<T>{
+//     private content: T;
+//     constructor (initialCount: T){
+//         this.content = initialCount;
+//     }
+//     getHome(){
+//         return this.content;
+//     }
+//     setHome(value: T){
+//         this.content = value 
+//     }
+// }
+
+// const myHome = new Home<string>("Hello i am home");
+// console.log(myHome.getHome())
+// myHome.setHome("I am going to outside")
+// console.log(myHome.getHome())
+
+
+//+++++++++++++++++++++++++Type Narrowing +++++++++++++
+
+type MyType = string | number;
+
+function exampleFunction(value: MyType){
+    if(typeof value === "string"){
+        console.log(value.toUpperCase())
+    }else{
+        console.log(value.toFixed(3))
     }
 }
+exampleFunction("My name");
+exampleFunction(25)
 
-const stingBox = new Box<string>("Hello TypeScript")
-console.log(stingBox.getContent())
-stingBox.setContent("Hello Javascript")
-console.log(stingBox.getContent())
+//typeNarrowing with the instanceof
+
+
+//intersection type with typeNarrowing (&)(easy)(2:56)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
