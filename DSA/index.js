@@ -465,12 +465,55 @@ class NodeList {
        this.length--;
        return temp;
     }
+    getFirst(){
+        let temp = this.head;
+        return temp
+    }
+    getLast(){
+        let temp = this.head;
+        while(temp){
+            if(!temp.next){
+                return temp
+            }
+            temp = temp.next
+        }
+        return null
+    }
+    get(index){
+       let counter = 0;
+       let temp = this.head;
+
+       while(temp){
+        if(counter === index){
+            return temp
+        }
+        counter++;
+        temp = temp.next;
+       }
+       return null
+    }
+    set(index, value){
+        let counter = 0;
+        let temp = this.head;
+        
+        while(temp){
+            if(counter === index){
+                temp.value = value
+                return true;
+            }
+            counter ++;
+            temp = temp.next
+        }
+        return false
+
+    }
 }
 
 const myLinkedList = new NodeList(1);
 //Push method 
 myLinkedList.push(2);
 myLinkedList.push(3);
+myLinkedList.push(4);
 // myLinkedList.push(4);
 // myLinkedList.push(5);
 // myLinkedList.push(6);
@@ -486,4 +529,18 @@ myLinkedList.push(3);
 // console.log(myLinkedList)
 
 //Unshift method
-console.log(myLinkedList.shift())
+// console.log(myLinkedList.shift())
+
+//GetFirst method
+// console.log(myLinkedList.getFirst())
+
+//GetLAst method
+// console.log(myLinkedList.getLast())
+
+//Get 
+// console.log(myLinkedList.get(1))
+
+//set
+// myLinkedList.set(1, 2)
+// console.log(myLinkedList.get(1))
+
