@@ -443,6 +443,25 @@ class NodeList {
 
         return temp
     }
+    pop(){
+        if(!this.head){
+            return undefined;
+        }
+        let temp = this.head;
+        let prev = this.head;
+        while(temp.next){
+            prev = temp;
+            temp = temp.next
+        }
+        this.tail = prev;
+        this.tail.next = null;
+        this.length--
+        if(this.length === 0){
+            this.head = null
+            this.tail = null
+        }
+        return temp;
+    }
     unshift(value){
        let newNode = new Node(value);
 
@@ -459,10 +478,15 @@ class NodeList {
     shift(){
        if(!this.head)return undefined;
        let temp = this.head; //{head:1, next:{head:2, next:{head:3, next:null}}
-       this.head = temp.next;//{head:2, next:{head:3, next:null}}
+       this.head = temp.next;//move head forward //{head:2, next:{head:3, next:null}}
        //down of temp.next is first temp(461)
        temp.next = null;
        this.length--;
+
+       if(this.length === 0){
+        this.tail = null;
+       }
+
        return temp;
     }
     getFirst(){
@@ -507,6 +531,21 @@ class NodeList {
         return false
 
     }
+    insert(index, value){
+        if(index === 0){
+            return this.unshift(value)
+        }
+        if(index === this.length){
+            return this.push(value)
+        }
+        let newNode = new Node(value);
+
+        let temp = this.get(index - 1);
+        newNode.next = temp.next
+        temp.next = newNode
+        this.length++
+        return true;
+    }
 }
 
 const myLinkedList = new NodeList(1);
@@ -514,6 +553,8 @@ const myLinkedList = new NodeList(1);
 myLinkedList.push(2);
 myLinkedList.push(3);
 myLinkedList.push(4);
+myLinkedList.insert(0, 7)
+console.log(myLinkedList)
 // myLinkedList.push(4);
 // myLinkedList.push(5);
 // myLinkedList.push(6);
@@ -543,4 +584,6 @@ myLinkedList.push(4);
 //set
 // myLinkedList.set(1, 2)
 // console.log(myLinkedList.get(1))
+
+//Insert
 
