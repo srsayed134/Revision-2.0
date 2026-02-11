@@ -39,3 +39,12 @@ import * as fs from "fs/promises"
 // } catch (error) {
 //     console.log(error)
 // }
+
+
+//Create a new file and write
+
+try {
+    await fs.writeFile("README.md", "Hello nodejs")
+} catch (error) {
+    console.log(error)
+} //This create README.md file
