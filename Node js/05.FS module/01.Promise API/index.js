@@ -43,8 +43,27 @@ import * as fs from "fs/promises"
 
 //Create a new file and write
 
+// try {
+//     await fs.writeFile("README.md", "Hello nodejs")
+// } catch (error) {
+//     console.log(error)
+// } //This create README.md file
+
+//Read file 
+
 try {
-    await fs.writeFile("README.md", "Hello nodejs")
+    const data = await fs.readFile("README.md", "utf-8") //Without utf 8 output will show buffer
+    console.log(data)
 } catch (error) {
     console.log(error)
-} //This create README.md file
+}
+
+//Add text to readme file
+
+try {
+    await fs.appendFile("README.md", "This is example")
+} catch (error) {
+    console.log(error)
+}
+//Copy file
+
