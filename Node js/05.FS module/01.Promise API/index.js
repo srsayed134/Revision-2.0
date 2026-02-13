@@ -51,19 +51,36 @@ import * as fs from "fs/promises"
 
 //Read file 
 
-try {
-    const data = await fs.readFile("README.md", "utf-8") //Without utf 8 output will show buffer
-    console.log(data)
-} catch (error) {
-    console.log(error)
-}
+// try {
+//     const data = await fs.readFile("README.md", "utf-8") //Without utf 8 output will show buffer
+//     console.log(data)
+// } catch (error) {
+//     console.log(error)
+// }
 
 //Add text to readme file
 
+// try {
+//     await fs.appendFile("README.md", "This is example")
+// } catch (error) {
+//     console.log(error)
+// }
+
+//Copy file
+
+// try {
+//     await fs.copyFile("README.md", "Example.txt")
+// } catch (error) {
+//     console.log(error)
+// }
+
+//Get file information
+
 try {
-    await fs.appendFile("README.md", "This is example")
+    const info = await fs.stat("Example.txt")
+    console.log(info)
+    console.log(info.isFile()) //true
+    console.log(info.isDirectory()) //false
 } catch (error) {
     console.log(error)
 }
-//Copy file
-
